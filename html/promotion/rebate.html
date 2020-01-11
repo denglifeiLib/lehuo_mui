@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.css" rel="stylesheet" />
+		<link href="../../css/h5.css" rel="stylesheet" />
+	</head>
+
+	<body class="promotion_rebate_page">
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 id="title" class="mui-title">返利规则</h1>
+		</header>
+		
+		<div class="mui-content">
+			<div class="my_slider">
+				<div class="flex_box top_switch">
+					<div class="mui-segmented-control mui-segmented-control-inverted">
+						<a class="mui-control-item mui-active" href="#item1">饿了么</a>
+					</div>
+					<div class="noMore" href="javascript:;" id="noMore">敬请期待</div>
+				</div>
+				
+				<div class="content">
+					<div id="item1" class="mui-control-content mui-active element">
+						<div class="list">
+							<div class="flex_box">
+								<img src="../../images/Rectangle1.png" alt="" class="hd">
+								<div class="bd">
+									<p>领券点餐后返 0%</p>
+									<p class="grey">默认等级</p>
+								</div>
+							</div>
+							<div class="flex_box">
+								<img src="../../images/Rectangle2.png" alt="" class="hd">
+								<div class="bd">
+									<p>领券点餐后返 <span class="light_red">2%</span></p>
+									<p class="grey">付费9.9升级</p>
+								</div>
+							</div>
+							<div class="flex_box">
+								<img src="../../images/Rectangle3.png" alt="" class="hd">
+								<div class="bd">
+									<p>领券点餐后返 <span class="light_red">3%</span></p>
+									<p class="grey">推荐12个V1升级</p>
+								</div>
+							</div>
+							<div class="flex_box">
+								<img src="../../images/Rectangle4.png" alt="" class="hd">
+								<div class="bd">
+									<p>领券点餐后返 <span class="light_red">3.2%</span></p>
+									<p class="grey">推荐50个V2升级  </p>
+								</div>
+							</div>
+						</div>
+						<dl class="rules">
+							<dt>收益规则 </dt>
+							<dd>若您当前是V0会员 ，如果您成为V1，可获得团队里所有低于V1的差额收入。</dd>
+							<dd>若您当前是V3，您推荐了小明成为V1，小明领券后点餐，您的收益是3.2-2%的差额收入。</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		
+		
+	</body>
+</html>
+
+<script src="../../js/mui.min.js"></script>
+<script src="../../js/common.js"></script>
+
+<script type="text/javascript">
+	mui.ready(function () {
+		mui('.my_slider').on('click', '#noMore', function(e) {
+			e.preventDefault();
+			console.log(e)
+		});
+	})
+	
+</script>

@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.css" rel="stylesheet" />
+		<link href="../../css/h5.css" rel="stylesheet" />
+	</head>
+
+	<body class="set_page">
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 id="title" class="mui-title">账户设置 </h1>
+		</header>
+		
+		<div class="mui-content">
+			<div class="flex_box set_item">
+				<div class="bd">手机号</div>
+				<div class="ft">150****2123</div>
+			</div>
+			<div class="flex_box set_item">
+				<div class="bd">头像</div>
+				<div class="ft">
+					<img src="../../images/eg.jpg" alt="" class="head">
+				</div>
+			</div>
+			<div class="flex_box set_item hasArrow" style="margin-top: 1px;" id="set_name">
+				<div class="bd">昵称</div>
+				<div class="ft  mui-navigate-right">昵称</div>
+			</div>
+			<a class="flex_box set_item hasArrow" href="set_weix_success.html">
+				<div class="bd">绑定微信</div>
+				<div class="ft  mui-navigate-right">qdwqd</div>
+			</a>
+			<div class="flex_box set_item hasArrow" id="contact_way">
+				<div class="bd">联系方式显示</div>
+				<div class="ft  mui-navigate-right">微信</div>
+			</div>
+			
+			<button type="button" class="mui-btn mui-btn-white mui-btn-block logout_btn">退出登录</button>
+		</div>
+		
+		<!-- 联系方式显示 -->
+		<div class="mui-popover hidden set_contact_alert">
+			<div class="alert_cont">
+				<p class="title">微信号复制成功</p>
+				<p class="red sub_title">团队可以来联系你</p>
+				<div class="mui-input-row mui-radio border_btm">
+					<input name="Checkbox" type="radio" checked>
+					<label>显示微信号</label>
+				</div>
+				<div class="mui-input-row mui-radio ">
+					<input name="Checkbox" type="radio" checked>
+					<label>显示手机号</label>
+				</div>
+				<div class="two_btns">
+					<button class="mui-btn mui-btn-grey mui-btn-block" id="cancel_contact">取消</button>
+					<button class="mui-btn mui-btn-danger mui-btn-block" id="confirm_contact">确定</button>
+				</div>
+				
+			</div>
+		</div>
+		
+		<!-- 设置昵称 -->
+		<div class="mui-popover hidden set_name_alert">
+			<div class="alert_cont">
+				<p class="title">设置昵称</p>
+				<div class="mui-input-row alert-input">
+					<input name="name" type="text" placeholder="请输入昵称">
+				</div>
+				<div class="two_btns">
+					<button class="mui-btn mui-btn-grey mui-btn-block" id="cancel_name">取消</button>
+					<button class="mui-btn mui-btn-danger mui-btn-block" id="confirm_name">确定</button>
+				</div>
+				
+			</div>
+		</div>
+	</body>
+</html>
+
+
+<script src="../../js/mui.min.js"></script>
+<script src="../../js/common.js"></script>
+
+<script type="text/javascript">
+	mui.ready(function () {
+		mui('.set_page').on('click', '#contact_way', function() {
+			mui('.set_contact_alert').popover('toggle')
+		})
+		mui('.set_page').on('click', '#cancel_contact', function() {
+			mui('.set_contact_alert').popover('hide')
+		})
+		mui('.set_page').on('click', '#confirm_contact', function() {
+			mui('.set_contact_alert').popover('toggle')
+		})
+		
+		
+		mui('.set_page').on('click', '#set_name', function() {
+			mui('.set_name_alert').popover('toggle')
+		})
+		mui('.set_page').on('click', '#cancel_name', function() {
+			mui('.set_name_alert').popover('hide')
+		})
+		mui('.set_page').on('click', '#confirm_name', function() {
+			mui('.set_name_alert').popover('toggle')
+		})
+		
+	})
+</script>

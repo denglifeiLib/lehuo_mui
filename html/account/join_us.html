@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.css" rel="stylesheet" />
+		<link href="../../css/h5.css" rel="stylesheet" />
+	</head>
+
+	<body class="promotion_rebate_page account_join_us_page">
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 id="title" class="mui-title">返利规则</h1>
+		</header>
+		
+		<div class="mui-content">
+			<div class="top_info">
+				<p class="dis">成为吃货 点餐返现享</p>
+				<p class="value light_red">2%～3.2%</p>
+			</div>
+			<button type="button" class="mui-btn mui-btn-red mui-btn-block open_btn">¥9.9立即开通</button>
+			
+			<div class="my_slider">
+				<div class="flex_box top_switch">
+					<div class="mui-segmented-control mui-segmented-control-inverted">
+						<a class="mui-control-item mui-active" href="#item1">饿了么</a>
+					</div>
+					<div class="noMore" href="javascript:;" id="noMore">敬请期待</div>
+				</div>
+				<div class="content">
+					<div id="item1" class="mui-control-content mui-active element">
+						<div class="list">
+							<div class="flex_box">
+								<img src="../../images/Rectangle1.png" alt="" class="hd">
+								<div class="bd">
+									<p>领券点餐后返 0%</p>
+									<p class="grey">默认等级</p>
+								</div>
+							</div>
+							<div class="flex_box">
+								<img src="../../images/Rectangle2.png" alt="" class="hd">
+								<div class="bd">
+									<p>领券点餐后返 <span class="light_red">2%</span></p>
+									<p class="grey">付费9.9升级</p>
+								</div>
+							</div>
+							<div class="flex_box">
+								<img src="../../images/Rectangle3.png" alt="" class="hd">
+								<div class="bd">
+									<p>领券点餐后返 <span class="light_red">3%</span></p>
+									<p class="grey">推荐12个V1升级</p>
+								</div>
+							</div>
+							<div class="flex_box">
+								<img src="../../images/Rectangle4.png" alt="" class="hd">
+								<div class="bd">
+									<p>领券点餐后返 <span class="light_red">3.2%</span></p>
+									<p class="grey">推荐50个V2升级  </p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		
+		
+	</body>
+</html>
+
+<script src="../../js/mui.min.js"></script>
+<script src="../../js/common.js"></script>
+
+<script type="text/javascript">
+	mui.ready(function () {
+		mui('.my_slider').on('click', '#noMore', function(e) {
+			e.preventDefault();
+			console.log(e)
+		});
+	})
+	
+</script>

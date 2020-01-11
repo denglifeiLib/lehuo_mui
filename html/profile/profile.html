@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.css" rel="stylesheet" />
+		<link href="../../css/h5.css" rel="stylesheet" />
+	</head>
+
+	<body class="profile_page">
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 id="title" class="mui-title">我的收益</h1>
+		</header>
+		
+		<div class="mui-content">
+			<div class="top">
+				<p class="dis">可提现金额</p>
+				<p class="value"> <span class="unit">¥</span>22.30</p>
+				<button type="button" class="mui-btn mui-btn-white mui-btn-block open_btn" id="go_withdraw">提现</button>
+				<a class="redeem" href="withdraw_record.html">提现记录</a>
+			</div>
+			<div class="wrap round shouyi_item_wrap">
+				<a class="flex_box navigate_item" href="order_list.html">
+					<div class="bd">外卖返佣收益</div>
+					<div class="ft mui-navigate-right grey">订单列表 </div>
+				</a>
+				<div class="flex_box shouyi_item">
+					<div>
+						<p class="red">昨日预估</p>
+						<p class="light_red">¥3.00</p>
+					</div>
+					<div>
+						<p class="red">本月预估</p>
+						<p class="light_red">¥31.23</p>
+					</div>
+					<div>
+						<p class="red">总收益</p>
+						<p class="light_red">¥1231.13</p>
+					</div>
+				</div>
+			</div>
+			<div class="wrap round shouyi_item_wrap">
+				<a class="flex_box navigate_item">
+					<div class="bd">招募吃货收益</div>
+				</a>
+				<div class="flex_box shouyi_item">
+					<div>
+						<p class="red">今日收益</p>
+						<p class="light_red">¥3.00</p>
+					</div>
+					<div>
+						<p class="red">本月预估</p>
+						<p class="light_red">¥5.00</p>
+					</div>
+					<div>
+						<p class="red">总收益</p>
+						<p class="light_red">¥120.00</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+
+
+<script src="../../js/mui.min.js"></script>
+<script src="../../js/common.js"></script>
+
+
+<script type="text/javascript">
+	mui.ready(function () {
+		mui('.profile_page').on('click', '#go_withdraw', function() {
+			mui.openWindow({
+				url: 'withdraw.html'
+			});
+		})
+		
+	})
+</script>

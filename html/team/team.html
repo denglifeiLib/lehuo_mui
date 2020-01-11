@@ -1,0 +1,154 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.css" rel="stylesheet" />
+		<link href="../../css/h5.css" rel="stylesheet" />
+	</head>
+
+	<body class="team_page">
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 id="title" class="mui-title">我的团队</h1>
+		</header>
+		
+		<div class="mui-content">
+			<div class="my_slider">
+				<div class="mui-segmented-control mui-segmented-control-inverted">
+					<a class="mui-control-item mui-active" href="#item1">汇总</a>
+					<a class="mui-control-item" href="#item2">直属</a>
+					<a class="mui-control-item" href="#item3">非直属</a>
+				</div>
+				
+				<div>
+					
+					<div id="item1" class="mui-control-content mui-active">
+						<div class="flex_box justify all_item">
+							<div>
+								<p class="grey">全部 V1（人）</p>
+								<p class="light_red">32</p>
+							</div>
+							<div>
+								<p class="grey">全部 V2（人）</p>
+								<p class="light_red">3</p>
+							</div>
+							<div>
+								<p class="grey">全部 V0（人）</p>
+								<p class="light_red">12</p>
+							</div>
+						</div>
+						<div class="flex_box justify all_item">
+							<div>
+								<p class="grey">直推 V1（人）</p>
+								<p class="light_red">32</p>
+							</div>
+							<div>
+								<p class="grey">直推 V2（人）</p>
+								<p class="light_red">1</p>
+							</div>
+							<div>
+								<p class="grey">直推 V0（人）</p>
+								<p class="light_red">13</p>
+							</div>
+						</div>
+						<div class="flex_box justify all_item">
+							<div>
+								<p class="grey">今日直推（人）</p>
+								<p class="light_red">32</p>
+							</div>
+							<div>
+								<p class="grey">昨日直推（人）</p>
+								<p class="light_red">1</p>
+							</div>
+						</div>
+					</div>
+					
+					<div id="item2" class="mui-control-content">
+						<div class="flex_box direct_team">
+							<div class="hd">
+								<img src="../../images/eg.jpg" alt="" class="head">
+								<img src="../../images/Rectangle1.png" alt="" class="level">
+							</div>
+							<div class="bd">
+								<p class="name">殳谦亚</p>
+								<p class="dis grey">2020-01-02 注册</p>
+							</div>
+							<img src="../../images/weix.png" alt="" class="ft platform">
+						</div>
+						<div class="flex_box direct_team">
+							<div class="hd">
+								<img src="../../images/eg.jpg" alt="" class="head">
+								<img src="../../images/Rectangle1.png" alt="" class="level">
+							</div>
+							<div class="bd">
+								<p class="name">Niek Bove</p>
+								<p class="dis grey">2020-01-02 注册</p>
+							</div>
+							<img src="../../images/tep.png" alt="" class="ft platform">
+						</div>
+					</div>
+					
+					<div id="item3" class="mui-control-content">
+						<div class="flex_box direct_team">
+							<div class="hd">
+								<img src="../../images/eg.jpg" alt="" class="head">
+								<img src="../../images/Rectangle1.png" alt="" class="level">
+							</div>
+							<div class="bd">
+								<p class="name">Saami Al Samad</p>
+								<p class="dis grey">dqwq邀请注册</p>
+							</div>
+						</div>
+						<div class="flex_box direct_team">
+							<div class="hd">
+								<img src="../../images/eg.jpg" alt="" class="head">
+								<img src="../../images/Rectangle1.png" alt="" class="level">
+							</div>
+							<div class="bd">
+								<p class="name">Justine Marshalle</p>
+								<p class="dis grey">dqwq邀请注册</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		
+		<!-- <div class="mui-backdrop">
+			<div class="alert_cont">
+				<img src="../../images/weix.png" alt="" class="plateform_icon">
+				<p class="title">微信号复制成功</p>
+				<p class="red">请前往微信搜索添加</p>
+				<button class="mui-btn mui-btn-danger mui-btn-block">好的</button>
+			</div>
+		</div> -->
+		
+	</body>
+</html>
+
+<script src="../../js/mui.min.js"></script>
+<script src="../../js/common.js"></script>
+
+<script type="text/javascript">
+	mui.ready(function () {
+		var gallery = mui('.mui-slider');
+		
+		// var length = gallery.slider().snaps.length;
+		
+		
+		mui('.slider_contr').on('click', '#goPre', function() {
+			var curPage = mui('.mui-slider').slider().currentPage.pageX;
+			var targetIndex =  curPage - 1 === -1 ? 4 - 1 : curPage - 1;
+			console.log(2222, curPage, 4, targetIndex)
+			gallery.slider({intervall: 0}).gotoItem(targetIndex);
+		})
+		// mui('.slider_contr').on('click', '#goNext', function() {
+		// 	gallery.slider().gotoItem(curPage + 1 === length ? curPage + 1 : 0);
+		// })
+	})
+	
+</script>

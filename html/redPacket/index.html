@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.css" rel="stylesheet" />
+		<link href="../../css/h5.css" rel="stylesheet" />
+	</head>
+
+	<body class="redPacket_page">
+		<header class="mui-bar mui-bar-nav">
+			<!-- <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a> -->
+			<h1 id="title" class="mui-title">乐活小镇</h1>
+		</header>
+		<nav class="mui-bar mui-bar-tab">
+			<a class="mui-tab-item mui-active" href="javascript:;">
+				<img src="../../images/tab-1-s.png" class="mui-icon">
+				<span class="mui-tab-label">领取红包</span>
+			</a>
+			<a class="mui-tab-item" href="../promotion/index.html">
+				<img src="../../images/tab-2-n.png" class="mui-icon">
+				<span class="mui-tab-label">项目推广</span>
+			</a>
+			<a class="mui-tab-item" href="../account/index.html">
+				<img src="../../images/tab-3-n.png" class="mui-icon">
+				<span class="mui-tab-label">个人中心</span>
+			</a>
+		</nav>
+		
+		<div class="mui-content">
+			<div class="card_cont">
+				<p class="tt red">领劵下单拿返利</p>
+				<div class="flex_box flow_box">
+					<div class="item">
+						<img src="../../images/tab1_icon1@2x.png" alt="" class="flow_img">
+						<p class="red">先领券</p>
+					</div>
+					<div class="item">
+						<img src="../../images/sanjiao@2x.png" alt="" class="sanjiao">
+					</div>
+					<div class="item">
+						<img src="../../images/tab1_icon2@2x.png" alt="" class="flow_img">
+						<p class="red">再下单</p>
+					</div>
+					<div class="item">
+						<img src="../../images/sanjiao@2x.png" alt="" class="sanjiao">
+					</div>
+					<div class="item">
+						<img src="../../images/tab1_icon3@2x.png" alt="" class="flow_img">
+						<p class="red">等返利</p>
+					</div>
+				</div>
+				
+				<button type="button" class="mui-btn mui-btn-red mui-btn-block">点击领券</button>
+				<button type="button" class="mui-btn mui-btn-yellow mui-btn-block">领吃货专属券</button>
+				<!-- <a href="#notice_alert" id="notice" class="notice">注意事项</a> -->
+				<span class="notice" id="notice">注意事项</span>
+			</div>
+			
+			<div class="wrap round">       
+				<a class="flex_box navigate_item ">
+					<img src="../../images/tab1_icon4@2x.png" alt="" class="hd_icon_1 hd">
+					<div class="bd">我要点餐</div>
+					<div class="ft mui-navigate-right"></div>
+				</a>
+			</div>
+			
+		</div>
+		
+		<div class="mui-popover hidden" id="notice_alert">
+			<div class="alert_cont">
+				<p class="title">注意事项</p>
+				<div class="text">品牌也远不是强调名称，标志，符号或者商标。它融合了一系列定义其形象的独特价值，并作为一份不成文的合同，通过在消费者每一次购买，使用，体验是提供始终如一的产品和服务。同时还在寻求与消费者的情感联系，确保终身关系</div>
+				<button class="mui-btn mui-btn-danger mui-btn-block" id="confirm">好的</button>
+			</div>
+		</div>
+	</body>
+</html>
+
+<script src="../../js/mui.min.js"></script>
+<script src="../../js/common.js"></script>
+
+<script type="text/javascript">
+	mui.ready(function() {
+		
+		mui('.redPacket_page').on('click', '.notice, #confirm', function() {
+			mui('#notice_alert').popover('toggle')
+		});
+		
+	})
+</script>

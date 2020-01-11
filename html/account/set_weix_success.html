@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.css" rel="stylesheet" />
+		<link href="../../css/h5.css" rel="stylesheet" />
+	</head>
+
+	<body class="set_weix_success">
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 id="title" class="mui-title">绑定微信</h1>
+		</header>
+		
+		<div class="mui-content">
+			<img src="../../images/weix.png" alt="" class="success_img">
+			<p class="title">您已绑定微信</p>
+			<p class="dis">tweqe12312</p>
+			<button type="button" class="mui-btn mui-btn-red mui-btn-block withdraw_btn">解绑</button>
+		</div>
+	</body>
+</html>
+
+
+<script src="../../js/mui.min.js"></script>
+<script src="../../js/common.js"></script>
+
+<script type="text/javascript">
+	mui.ready(function () {
+		mui('.set_weix_success').on('click', '.withdraw_btn', function() {
+			mui.openWindow({
+				url: '../account/set.html'
+			});
+		})
+		
+	})
+</script>
