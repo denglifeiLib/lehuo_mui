@@ -892,3 +892,20 @@ p{
 	padding-top: 8.533vw;
 	padding-bottom: 8vw;
 }
+
+
+
+
+.error_page .mui-content{
+	display: flex;
+	padding-left: 9.867vw;
+	padding-right: 9.867vw;
+	text-align: center;
+	flex-direction: column;
+	justify-content: space-around;
+	
+}
+.error_page .main .error_img{
+	width: 41.33vw;
+	margin-bottom: 6.4vw;
+}
