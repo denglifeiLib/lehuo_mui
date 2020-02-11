@@ -11,27 +11,36 @@
 
 	<body class="login_page">
 		<div class="mui-content">
-			<img src="../../images/logo@2x.png" alt="" class="logo">
-			<p class="title">欢迎来到乐活小镇</p>
+			<!-- 游客登录 -->
+			<!-- <div class="form">
+				<img src="../../images/bx_img/login_tt_yk.png" alt="" class="title">
+				<div class="flex_box mui-input-row">
+					<div class="hd label">姓名</div>
+					<input value="姓名" type="text" class="mui-input-clear bd" placeholder="请输入姓名">
+				</div>
+			</div> -->
+			
+			<!-- 太保伙伴 -->
 			<div class="form">
-				<div class="flex_box border_btm mui-input-row">
-					<input value="150002312323" type="text" class="mui-input-clear bd" placeholder="请输入手机号">
+				<img src="../../images/bx_img/login_tt.png" alt="" class="title">
+				<div class="flex_box mui-input-row mui-select">
+					<div class="hd label">机构</div>
+					<select class="bd" placeholder="请选择">
+						<option value ="1">1</option>
+						<option value ="1">1</option>
+						<option value ="1">1</option>
+						<option value ="1">1</option>
+					</select>
 				</div>
-				<div class="flex_box justify border_btm">
-					<div class="mui-input-row">
-						<input value="150002312323" type="text" class="mui-input-clear" placeholder="请输入验证码">
-					</div>
-					<span class="count light_red ft">获取验证码</span>
-					<!-- <span class="count grey ft">21秒后重新获取</span> -->
+				<div class="flex_box mui-input-row">
+					<div class="hd label">工号</div>
+					<input value="150002312323" type="text" class="mui-input-clear bd" placeholder="请输入工号">
 				</div>
 			</div>
 			
-			<button type="button" class="mui-btn mui-btn-red mui-btn-block logout_btn" id="logout_btn">登录</button>
+			<button type="button" class="mui-btn mui-btn-blue mui-btn-block login_btn w576" id="logout_btn">确定</button>
 			
-			<div class="change_login_type" id="weixinLogin">
-				<img src="../../images/weix.png" >
-				<p class="grey">微信登录</p>
-			</div>
+			
 		</div>
 	</body>
 </html>
@@ -43,15 +52,10 @@
 
 <script type="text/javascript">
 	mui.ready(function () {
+		
 		mui('.login_page').on('click', '#logout_btn', function() {
 			mui.openWindow({
-				url:'../redPacket/index.html'
-			});
-		})
-		
-		mui('.login_page').on('click', '#weixinLogin', function() {
-			mui.openWindow({
-				url:'bind_phone.html'
+				// url:'../redPacket/index.html'
 			});
 		})
 	})

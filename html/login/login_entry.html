@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.css" rel="stylesheet" />
+		<link href="../../css/h5.css" rel="stylesheet" />
+	</head>
+
+	<body class="login_entry_page">
+		<div class="mui-content">
+			<div class="list">
+				<div class="flex_box" id="partner">
+					<img src="../../images/bx_img/yewuyuan@2x.png" alt="" class="icon">
+					<p class="grey">太保伙伴</p>
+				</div>
+				<div class="flex_box" id="custmor">
+					<img src="../../images/bx_img/youke@2x.png" alt="" class="icon">
+					<p class="grey">游客</p>
+				</div>
+			</div>
+			<p class="dis">说明：请选择上方按钮进行登录</p>
+		</div>
+	</body>
+</html>
+
+
+<script src="../../js/mui.min.js"></script>
+<script src="../../js/common.js"></script>
+
+
+<script type="text/javascript">
+	mui.ready(function () {
+		mui('.login_entry_page').on('click', '#partner', function() {
+			mui.openWindow({
+				url:'./login.html',
+				extras: {
+					type: 'partner'
+				}
+			});
+		})
+		
+		mui('.login_entry_page').on('click', '#custmor', function() {
+			mui.openWindow({
+				url:'./login.html',
+				extras: {
+					type: 'partner'
+				}
+			});
+		})
+	})
+</script>

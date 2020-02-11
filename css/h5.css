@@ -9,6 +9,10 @@ body,html{
 ::-webkit-input-placeholder,:-moz-placeholder,::-moz-placeholder,:-ms-input-placeholder{
 	color: #B8B8BC;
 }
+.w576{
+	width: 76.8vw;
+	margin: 0 auto;
+}
 .red{
 	color: #9E5F3F;
 }
@@ -63,6 +67,10 @@ p{
 .mui-btn-block{
 	padding: 10px 0;
 	margin-bottom: 0;
+}
+.mui-btn-blue{
+	border: 0;
+	background:linear-gradient(0deg,rgba(30,120,242,1),rgba(49,138,234,1),rgba(30,119,241,1));;
 }
 .mui-btn-red{
 	border: 0;
@@ -836,36 +844,63 @@ p{
 
 
 
+.login_entry_page .mui-content{
+	min-height: 100vh;
+	padding: 50vw 4.267vw 0;
+	background: #fff url(../images/bx_img/login_entry_top.png) top center no-repeat;
+	background-size: 100% auto;
+}
+.login_entry_page .list > div {
+	width:77.067vw;
+	height: 24.933vw;
+	margin: 0 auto 8.266vw;
+	background:rgba(247,247,247,1);
+	border-radius:4px;
+	justify-content: center;
+}
+.login_entry_page .list .icon{
+	width: 12vw;
+	margin-right: 10px;
+}
+.login_entry_page .dis{
+	padding: 10px 0 0 7.2vw;
+	font-size: 3.733vw;
+	color:#B1B1B1;
+}
+
 
 
 .login_page .mui-content{
 	min-height: 100vh;
-	padding: 13px 10.1vw 0;
-	background: #fff url(../images/login_bg@2x.png) bottom center no-repeat;
+	padding: 22.4vw 4.267vw 0;
+	background: #fff url(../images/bx_img/login_top_bg@2x.png) top center no-repeat;
 	background-size: 100% auto;
 }
 .bind_phone_page .mui-content{
 	padding-top: 44px;
 }
-.login_page .logo{
-	display: block;
-	width: 14.933vw;
-}
 .login_page .title{
-	padding-top: 4.2667vw;
-	padding-bottom: 10vw;
-	font-size: 6.4vw;
-	font-weight: bold;
+	display: block;
+	height: 6.4vw;
+	margin: 0 auto 10.13vw;
 }
 .login_page .form{
 	margin-bottom: 11vw;
+	padding: 12.533vw 7.4667vw;
+	box-shadow:0px 3px 9px 0px rgba(0, 0, 0, 0.13);
+	border-radius:11upx;
+	background: #fff;
 }
-.login_page .form input{
-	padding-left: 0;
+.login_page .form input, .login_page .form select{
 	border: 0;
 	margin: 0;
+	padding: 10px 15px;
 	font-size: 16px;
 	font-weight: normal;
+	background: #F2F2F9;
+}
+.login_page .form .label{
+	margin-right: 15px;
 }
 .login_page .form .flex_box{
 	margin-bottom: 4vw;
@@ -873,19 +908,8 @@ p{
 .login_page .form .light_red{
 	color: #FB2C2E;
 }
-.login_page .form .count{
-	padding-right: 0;
-}
-.login_page .change_login_type{
-	padding-top: 11.2vw;
-	padding-bottom: 2.13vw;
-	font-size: 12px;
-	text-align: center;
-}
-.login_page .change_login_type img{
-	display: block;
-	margin: 0 auto 8px;
-}
+
+
 
 
 .bind_phone_page .dis{
