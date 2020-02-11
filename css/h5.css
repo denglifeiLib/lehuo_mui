@@ -844,13 +844,13 @@ p{
 
 
 
-.login_entry_page .mui-content{
+.login_page .login_choose_box.mui-content{
 	min-height: 100vh;
 	padding: 50vw 4.267vw 0;
 	background: #fff url(../images/bx_img/login_entry_top.png) top center no-repeat;
 	background-size: 100% auto;
 }
-.login_entry_page .list > div {
+.login_choose_box .list > div {
 	width:77.067vw;
 	height: 24.933vw;
 	margin: 0 auto 8.266vw;
@@ -858,11 +858,11 @@ p{
 	border-radius:4px;
 	justify-content: center;
 }
-.login_entry_page .list .icon{
+.login_choose_box .list .icon{
 	width: 12vw;
 	margin-right: 10px;
 }
-.login_entry_page .dis{
+.login_choose_box .dis{
 	padding: 10px 0 0 7.2vw;
 	font-size: 3.733vw;
 	color:#B1B1B1;
@@ -870,42 +870,39 @@ p{
 
 
 
-.login_page .mui-content{
+.login_page .login_form_box.mui-content{
 	min-height: 100vh;
 	padding: 22.4vw 4.267vw 0;
 	background: #fff url(../images/bx_img/login_top_bg@2x.png) top center no-repeat;
 	background-size: 100% auto;
 }
-.bind_phone_page .mui-content{
-	padding-top: 44px;
-}
-.login_page .title{
+.login_form_box .title{
 	display: block;
 	height: 6.4vw;
 	margin: 0 auto 10.13vw;
 }
-.login_page .form{
+.login_form_box .form{
 	margin-bottom: 11vw;
 	padding: 12.533vw 7.4667vw;
 	box-shadow:0px 3px 9px 0px rgba(0, 0, 0, 0.13);
 	border-radius:11upx;
 	background: #fff;
 }
-.login_page .form input, .login_page .form select{
+.login_form_box .form input, .login_form_box .form select{
 	border: 0;
 	margin: 0;
-	padding: 10px 15px;
+	padding: 0 15px;
 	font-size: 16px;
 	font-weight: normal;
 	background: #F2F2F9;
 }
-.login_page .form .label{
+.login_form_box .form .label{
 	margin-right: 15px;
 }
-.login_page .form .flex_box{
+.login_form_box .form .flex_box{
 	margin-bottom: 4vw;
 }
-.login_page .form .light_red{
+.login_form_box .form .light_red{
 	color: #FB2C2E;
 }
 
