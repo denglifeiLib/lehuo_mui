@@ -321,51 +321,91 @@ p{
 }
 
 
-.promotion_way_page{
+.share_page{
 	background: #fff;
 }
-.promotion_way_page .mui-control-content{
+.share_page .mui-content{
+	padding-top: calc(44px + 6.667vw)
+}
+.share_page .swiper-slide{
+	padding: 0 4.226vw;
+}
+/* .share_page .mui-control-content{
 	padding: 5.333vw 4.2667vw;
 }
-.promotion_way_page .mui-control-content .promotion_text{
+.share_page .mui-control-content .promotion_text{
 	min-height: 72vw;
 	padding: 4.2667vw;
 	background:rgba(245,245,245,1);
 	border-radius:4px;
 }
-.promotion_way_page .mui-control-content .copy_tip{
+.share_page .mui-control-content .copy_tip{
 	padding: 6.67vw;
 	text-align: center;
 	font-size: 13px;
 }
-.promotion_way_page .mui-control-content .copy_btn{
+.share_page .mui-control-content .copy_btn{
 	width: 80.3vw;
 	margin: 0 auto;
-}
-.promotion_way_page .slider_contr{
-	margin-top: 15px;
+} */
+.share_page .slider_contr{
+	margin: 9.33vw 4.226vw 0;
 	height: 9.8667vw;
 }
-.promotion_way_page .slider_contr img{
+.share_page .slider_contr img{
 	padding: 0;
 	width: 13.6vw;
 	height: 9.8667vw;
 }
-.promotion_way_page .slider_contr .bd{
+.share_page .slider_contr .bd{
+	color: #2E2E2E;
+	font-weight: normal;
 	text-align: center;
 	height: 9.8667vw;
+	line-height: 9.8667vw;;
 }
-.promotion_way_page .alert_cont {
+.share_page .alert_cont {
 	text-align: center;
 }
-.promotion_way_page .alert_cont .title{
+.share_page .alert_cont .title{
 	padding: 20px 0 4px;
 }
-.promotion_way_page .alert_cont button{
+.share_page .alert_cont button{
 	margin-top: 32px;
 }
-.promotion_way_page .alert_cont .plateform_icon{
+.share_page .alert_cont .plateform_icon{
 	width: 12.8vw;
+}
+.share_page .banner_box{
+	border-radius:8px;
+	box-shadow:3px 3px 11px rgba(0,0,0,0.21);
+}
+.share_page .banner_box .banner_con{
+	padding: 8.266vw 6.4vw 15.467vw;
+}
+.share_page .custmor{
+	padding-bottom: 8.2667vw;
+	margin-bottom: 8.2667vw;
+	border-bottom: solid 1px #EFEFEF;
+}
+.share_page .custmor .header{
+	width: 16.2667vw;
+	margin-right: 4.2667vw;
+	border-radius: 100px;
+}
+.share_page .custmor .name{
+	font-size: 4.8vw;
+	color: #2E2E2E;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+.share_page .ewm .ewm_img{
+	width: 25.867vw;
+	margin-right: 6.933vw;
+}
+.share_page .ewm .dis{
+	padding-top: 2.933vw;
+	color: #636363;
 }
 
 
