@@ -321,11 +321,34 @@ p{
 }
 
 
+
+
+.share_template_page{
+	background: #fff;
+}
+.share_template_page .mui-content{
+	padding: calc(44px + 6.667vw) 4.226vw 0;
+}
+.share_template_page .banner_box{
+	position: relative;
+	border-radius:8px;
+	box-shadow:3px 3px 11px rgba(0,0,0,0.21);
+}
+.share_template_page .banner{
+	display: block;
+	width: 91.548vw;
+	border-radius:8px;
+}
+.share_template_page .text, .share_template_page .img{
+	position: absolute;
+}
+
+
 .share_page{
 	background: #fff;
 }
 .share_page .mui-content{
-	padding-top: calc(44px + 6.667vw)
+	padding-top: calc(44px + 6.667vw);
 }
 .share_page .swiper-slide{
 	padding: 0 4.226vw;
