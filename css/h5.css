@@ -860,12 +860,18 @@ p{
 }
 .login_choose_box .list .icon{
 	width: 12vw;
-	margin-right: 10px;
+	margin-right: 4.8vw;
 }
 .login_choose_box .dis{
 	padding: 10px 0 0 7.2vw;
 	font-size: 3.733vw;
 	color:#B1B1B1;
+}
+.login_choose_box .list .grey{
+	width: 26.67vw;
+	font-size: 5.33vw;
+	font-weight:500;
+	color:rgba(33,118,241,1);
 }
 
 
@@ -879,7 +885,12 @@ p{
 .login_form_box .title{
 	display: block;
 	height: 6.4vw;
-	margin: 0 auto 10.13vw;
+	margin: 0 auto;
+}
+.login_form_box .dis{
+	padding: 10px 0 8vw;
+	text-align: center;
+	color:#B1B1B1;
 }
 .login_form_box .form{
 	margin-bottom: 11vw;
@@ -896,7 +907,12 @@ p{
 	font-weight: normal;
 	background: #F2F2F9;
 }
+.login_form_box #type_custmor .title{
+	margin-bottom: 10.233vw;
+}
 .login_form_box .form .label{
+	color: #000000;
+	font-size: 4.267vw;
 	margin-right: 15px;
 }
 .login_form_box .form .flex_box{
