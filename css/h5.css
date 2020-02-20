@@ -909,3 +909,82 @@ p{
 	width: 41.33vw;
 	margin-bottom: 6.4vw;
 }
+
+
+
+
+.about_us_page .mui-content{
+	overflow: hidden;
+	margin-top: 44px;
+	padding-top: 0;
+	background:#FF590D url(../images/tab1_bg.png) top center no-repeat;
+	background-size: 100% auto;
+}
+.about_us_page .my_item_wrap{
+	margin-top: 9.07vw;
+	padding: 6.4vw 9.3vw 11.73vw;
+	flex-direction: column;
+}
+.about_us_page .my_item_wrap .logo{
+	width: 14.93vw;
+}
+.about_us_page .my_item_wrap .name{
+	margin: 2.93vw 0 5.93vw;
+	font-size: 4vw;
+}
+.about_us_page .introduce{
+	padding: 6.4vw 5.07vw 12.5vw;
+	margin-top: 4.27vw;
+	
+}
+.about_us_page .introduce .list .flex_box{
+	margin-bottom: 8.27vw;
+}
+.about_us_page .introduce .list .flex_box:last-child{
+	margin-bottom: 0;
+}
+.about_us_page .introduce .list .hd{
+	width: 10.67vw;
+	margin: 0 11.467vw 0 5.6vw;
+}
+.about_us_page .introduce .list p{
+	font-size: 4vw;
+}
+.about_us_page .introduce .list .grey{
+	margin-top: 4px;
+	font-weight: normal;
+}
+.about_us_page .introduce .title{
+	margin-bottom: 9vw;
+	text-align: center;
+	font-size: 5vw;
+	font-weight: bold;
+}
+.about_us_page .introduce .title img{
+	height: 3.2vw;
+	margin: 0 3.73vw;
+}
+.about_us_page .introduce h4{
+	margin-top: 10vw;
+}
+.about_us_page .ewm{
+	padding: 13.8vw 0 13.3vw;
+	text-align: center;
+	
+}
+.about_us_page .ewm img{
+	width: 41.33vw;
+	border: solid 1.07vw #fff;
+}
+.about_us_page .ewm p{
+	color: #fff;
+	font-size: 4vw;
+}
+
+.about_us_page .btm{
+	font-size: 3vw;
+	line-height: 8.27vw;
+	text-align: center;
+	background: #ED5006;
+	color: #FFBA99;
+}
