@@ -28,3 +28,4 @@ function copyText(text) {
 	currentFocus.focus();
 	return flag;
 }
+
