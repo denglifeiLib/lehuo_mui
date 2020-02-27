@@ -14,50 +14,33 @@
 	</head>
 	<body class="login_page">
 		<div class="login_choose_box mui-content" id="login_choose_box">
-			<div class="list">
-				<div class="flex_box" id="partner">
-					<img src="../../images/bx_img/yewuyuan@2x.png" alt="" class="icon">
-					<p class="grey">太保伙伴</p>
-				</div>
-				<div class="flex_box" id="custmor">
-					<img src="../../images/bx_img/youke@2x.png" alt="" class="icon">
-					<p class="grey">游客</p>
-				</div>
+			<img src="../../images/tio.png" class="login_choose_img">
+			<div class="flex_box list fakeDom">
+				<div class="flex_box" id="partner"></div>
+				<div class="flex_box" id="custmor"></div>
 			</div>
-			<p class="dis">说明：请选择上方按钮进行登录</p>
 		</div>
 		<div class="login_form_box mui-content mui-hidden" id="login_form_box">
 			<!-- 游客登录 -->
-			<div class="form" id="type_custmor">
-				<img src="../../images/bx_img/login_tt_yk.png" alt="" class="title">
-				<div class="flex_box mui-input-row">
-					<div class="hd label">姓名</div>
-					<input value="姓名" type="text" class="mui-input-clear bd" placeholder="请输入姓名">
+			<div class="fyxy" id="type_custmor">
+				<img src="../../images/fyxy_top.png" class="login_fyxy_img">
+				<div class="form fakeDom">
+					<input value="" type="text" class="mui-input-clear<strong></strong>" placeholder="请选择您的机构">
+					<input value="" type="text" class="mui-input-clear<strong></strong>" placeholder="请输入推荐人工号或p13账号">
+					<button type="button"></button>
 				</div>
 			</div>
 			
 			<!-- 太保伙伴 -->
-			<div class="form" id="type_partner">
-				<img src="../../images/bx_img/login_tt.png" alt="" class="title">
-				<p class="dis">(首次登入请填写以下信息)</p>
-				<div class="flex_box mui-input-row mui-select">
-					<div class="hd label">机构</div>
-					<select class="bd" placeholder="请选择">
-						<option value ="1">1</option>
-						<option value ="1">1</option>
-						<option value ="1">1</option>
-						<option value ="1">1</option>
-					</select>
-				</div>
-				<div class="flex_box mui-input-row">
-					<div class="hd label">工号</div>
-					<input value="150002312323" type="text" class="mui-input-clear bd" placeholder="请输入工号">
+			<div class="fyxy mui-hidden" id="type_partner">
+				<img src="../../images/yxytop.png" class="login_yxy_img">
+				<div class="form fakeDom">
+					<input value="" type="text" class="mui-input-clear<strong></strong>" placeholder="请选择您的机构">
+					<input value="" type="text" class="mui-input-clear<strong></strong>" placeholder="请输入您的姓名">
+					<input value="" type="text" class="mui-input-clear<strong></strong>" placeholder="请输入您的工号">
+					<button type="button"></button>
 				</div>
 			</div>
-			
-			<button type="button" class="mui-btn mui-btn-blue mui-btn-block login_btn w576" id="logout_btn">确定</button>
-			
-			
 		</div>
 	</body>
 </html>
