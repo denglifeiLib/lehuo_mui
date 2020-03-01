@@ -1,14 +1,14 @@
 
 var player = document.getElementById('videoElement');
 var	isPlaying = false;
-// if (flvjs.isSupported()) {
-// 	var flvPlayer = flvjs.createPlayer({
-// 		type: 'flv',
-// 		url: 'http://127.0.0.1:8848/lehuo_mui/html/live/index.flv'
-// 	});
-// 	flvPlayer.attachMediaElement(videoElement);
-// 	flvPlayer.load(); //加载
-// }
+if (flvjs.isSupported()) {
+	var flvPlayer = flvjs.createPlayer({
+		type: 'flv',
+		url: 'http://127.0.0.1:8848/lehuo_mui/html/live/index.flv'
+	});
+	flvPlayer.attachMediaElement(videoElement);
+	flvPlayer.load(); //加载
+}
 
 function flv_start() {
 	console.log('flv_start')

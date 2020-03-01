@@ -14,9 +14,538 @@
 	</head>
 	<body class="live_page">
 		<div class="mui-content">
-			<div class="vedio_container" onclick="togglePlay()">
+			<!-- 顶部固定区域 -->
+			<div class="top_fixed_container" onclick="togglePlay()">
+				<!-- 视频 -->
 				<video id="videoElement" class="centeredVideo" autoplay width="100%" height="576">Your browser is too old which doesn't support HTML5 video.</video>
+				<!-- 发弹幕 -->
+				<div class="danmuBtn mui-hidden" id="danmuBtn">
+					<div class="btn" onclick="showDanmuAlert()">点我发弹幕</div>
+				</div>
+				
+				<!-- 倒计时 -->
+				<div class="countDown flex_box justify" id="countDown">
+					<div class="bd flex_box">
+						<img src="../../images/zb_icon_b@2x.png" alt="" class="icon">
+						直播倒计时
+					</div>
+					<div class="ft flex_box" id="countDown">
+						<span class="day">00</span>
+						<span>天</span>
+						<span class="hour">06</span>
+						<span>时</span>
+						<span class="minute">03</span>
+						<span>分</span>
+						<span class="second">00</span>
+						<span>秒</span>
+						<img src="../../images/clear.png" alt="" class="clear" onclick="document.getElementById('countDown').classList.add('mui-hidden')">
+					</div>
+				</div>
+				
+				<!-- 邀请达人榜 -->
+				<div class="countDown flex_box justify invitRange">
+					<div class="bd flex_box" onclick="location.href='./invit_range.html'">
+						<img src="../../images/drb_icon@2x.png" alt="" class="icon">
+						邀请达人榜
+						<span class="mui-icon mui-icon-arrowright"></span>
+					</div>
+					<div class="ft shareBtn">分享课程</div>
+				</div>
+				
+				<!-- tab选项卡 -->
+				<div id="tabControl" class="tabControl mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+					<div class="mui-scroll">
+						<a class="mui-control-item mui-active" href="#item1">讨论区</a>
+						<a class="mui-control-item" href="#item2">微资料</a>
+						<a class="mui-control-item" href="#item3">小调查</a>
+						<a class="mui-control-item" href="#item4">考考你</a>
+						<a class="mui-control-item" href="#item5">5个时</a>
+						<a class="mui-control-item" href="#item5">5个时</a>
+					</div>
+				</div>
+				
+				<!-- 置顶 公告 -->
+				<div class="topTipBox mui-hidden">
+					<div class="mui-slider" id="top_tip_slider">
+					  <div class="mui-slider-group">
+					    <div class="mui-slider-item item">
+							<div class="flex_box">
+								<img src="../../images/default.png" alt="" class="hd icon">
+								<div class="bd">
+									<p class="title">Elva Torres</p>
+									<p class="cont">产品创造于工厂，而品牌创造于心灵心灵心灵心灵</p>
+								</div>
+								<img src="../../images/zd_jb@2x.png" alt="" class="label">
+							</div>
+							
+						</div>
+						<div class="mui-slider-item item">
+							<div class="flex_box">
+								<img src="../../images/gg_icon@2x.png" alt="" class="hd icon">
+								<div class="bd">
+									<p class="title">公告</p>
+									<p class="cont">产品创造于工厂，而品牌创造于心灵</p>
+								</div>
+								<img src="../../images/zd_jb@2x.png" alt="" class="label">
+							</div>
+						</div>
+					  </div>
+					  <div class="mui-slider-indicator">
+						  <div class="mui-indicator mui-active"></div>
+						  <div class="mui-indicator"></div>
+					  </div>
+					</div>
+				</div>
 			</div>
+			
+			<!-- 内容部分 -->
+			<div class="flexibleBox">
+				<!-- 讨论区 -->
+				<div id="item1" class="mui-scroll-wrapper mui-control-content mui-active">
+					<!-- 讨论内容 -->
+					<div class="mui-scroll taolun_content">
+						<p class="time">2020年02月10日 下午4:08</p>
+						<div class="flex_box infoBox">
+							<img src="../../images/default.png" alt="" class="header hd">
+							<div class="bd">
+								<p class="name">居东</p>
+								<div class="text">我想跟你说你好</div>
+							</div>
+						</div>
+						<div class="flex_box infoBox">
+							<img src="../../images/default.png" alt="" class="header hd">
+							<div class="bd">
+								<p class="name"><span class="jiangshi">讲师</span>Ricardo Hale</p>
+								<div class="text">产品创造于工厂，而品牌创造于心</div>
+							</div>
+						</div>
+						<div class="flex_box infoBox">
+							<img src="../../images/default.png" alt="" class="header hd">
+							<div class="bd">
+								<p class="name"><span class="zhushou">直播小助手</span>敬娅</p>
+								<div class="text">产品创造于工厂，而品牌创造于心</div>
+							</div>
+						</div>
+						<div class="flex_box infoBox">
+							<img src="../../images/default.png" alt="" class="header hd">
+							<div class="bd">
+								<p class="name">我</p>
+								<div class="text mine">我想跟你说你好</div>
+							</div>
+						</div>
+						<!-- 语音 -->
+						<div class="flex_box infoBox">
+							<img src="../../images/default.png" alt="" class="header hd">
+							<div class="bd">
+								<p class="name">敬娅</p>
+								<div class="text mine voice" style="width: 50%;" onclick="playVedio(this)">
+									<audio preload="auto" hidden="true" src="http://192.168.43.46:8000/happy.mp3" controls></audio>
+									<div class="yy_img_box"><span class="yy_img"></span></div>
+									<span class="yy_time">30S</span>
+								</div>
+							</div>
+						</div>
+						<!-- 语音 未读-->
+						<div class="flex_box infoBox">
+							<img src="../../images/default.png" alt="" class="header hd">
+							<div class="bd">
+								<p class="name">敬娅</p>
+								<div class="text voice new" style="width: 100%;" onclick="playVedio(this)">
+									<audio preload="auto" hidden="true" src="http://192.168.43.46:8000/happy.mp3" controls></audio>
+									<div class="yy_img_box"><span class="yy_img"></span></div>
+									<span class="yy_time">180S</span>
+								</div>
+							</div>
+						</div>
+						<!-- 红包 -->
+						<div class="flex_box infoBox">
+							<img src="../../images/default.png" alt="" class="header hd">
+							<div class="bd">
+								<p class="name">我</p>
+								<div class="text hongbao" onclick="handleRedPack(this)">
+									<img src="../../images/hb_cc@2x.png" alt="" class="hongbao_ling">
+									<div class="hb_info">
+										<p class="bless">恭喜发财，大吉恭喜发财，大吉恭喜发财</p>
+										<p>领取红包</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- 红包 已领取 -->
+						<div class="flex_box infoBox">
+							<img src="../../images/default.png" alt="" class="header hd">
+							<div class="bd">
+								<p class="name">我</p>
+								<div class="text hongbao getted" onclick="handleRedPack(this)">
+									<img src="../../images/hb_cc@2x.png" alt="" class="hongbao_ling">
+									<div class="hb_info">
+										<p class="bless">恭喜发财，大吉恭喜发财，大吉恭喜发财</p>
+										<p>查看红包</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="flex_box infoBox">
+							<img src="../../images/default.png" alt="" class="header hd">
+							<div class="bd">
+								<p class="name">我</p>
+								<img src="../../images/bang_banner@2x.png" class="image" alt="">
+							</div>
+						</div>
+						<div class="flex_box infoBox">
+							<img src="../../images/default.png" alt="" class="header hd">
+							<div class="bd">
+								<p class="name">敬娅</p>
+								<img src="../../images/dl_bg.png" class="image" alt="">
+							</div>
+						</div>
+						<p class="dashang_dis">
+							<img src="../../images/small_hb@2x.png" alt="" class="hongbao">
+							<span>咖啡家</span>
+							<span>赞赏了</span>
+							<span>搭档</span>
+							<span>一个</span>
+							<span class="red">1.88</span>
+							<span>元红包</span>
+						</p>     
+						<p class="dashang_dis">
+							<img src="../../images/small_hb@2x.png" alt="" class="hongbao">
+							<span>刘大误</span>
+							<span>领取了</span>
+							<span>我的</span>
+							<span>红包</span>
+						</p>
+						<p class="dashang_dis">
+							<img src="../../images/small_hb@2x.png" alt="" class="hongbao">
+							<span>邓文迪</span>
+							<span>领取了</span>
+							<span>我的</span>
+							<span>红包</span>
+						</p>
+						<p class="dashang_dis">
+							<img src="../../images/small_hb@2x.png" alt="" class="hongbao">
+							<span>你领取了</span>
+							<span>邓文迪</span>
+							<span>的红包</span>
+						</p>
+					</div>
+					
+					<!-- 底部固定操作 -->
+					<!-- showMore showShortCut -->
+					<div class="fixed_opreration">
+						<div class="shortCutBox">
+							<span class="name">常用语</span>
+							<span class="word">签到</span>
+							<span class="word">抽礼物吧</span>
+							<span class="word">谢谢老师</span>
+						</div>
+						<div class="top flex_box">
+							<img src="../../images/f_icon_ct.png" class="icon" onclick="showYuyinAlert()">
+							<textarea rows="1" cols="" placeholder="请输入…"></textarea>
+							<img src="../../images/f_icon_vo.png" class="icon shortCutIcon noShortCut" onclick="toggleShortCut()">
+							<img src="../../images/f_icon_vo_s@2x.png" class="icon shortCutIcon shortCut" onclick="toggleShortCut()">
+							<img src="../../images/f_icon_ar.png" class="icon toggleMoreIcon noMore" onclick="toggleMore()">
+							<img src="../../images/f_icon_ar_s.png" class="icon toggleMoreIcon more" onclick="toggleMore()">
+						</div>
+						<div class="mui-slider moreList" id="more_list_slider">
+						  <div class="mui-slider-group">
+						    <div class="mui-slider-item item">
+								<div class="type">
+									<img src="../../images/more_icon_home@2x.png" alt="" class="icon">
+									<p class="text">首页</p>
+								</div>
+								<div class="type">
+									<img src="../../images/more_icon_tp@2x.png" alt="" class="icon">
+									<p class="text">照片</p>
+								</div>
+								<div class="type" onClick="showHongbaoAlert()">
+									<img src="../../images/more_icon_fhb@2x.png" alt="" class="icon">
+									<p class="text">红包</p>
+								</div>
+								<div class="type" onclick="showMessageAlert()">
+									<img src="../../images/more_icon_ly@2x.png" alt="" class="icon">
+									<p class="text">留言</p>
+								</div>
+								<div class="type">
+									<img src="../../images/more_icon_fx@2x.png" alt="" class="icon">
+									<p class="text">邀请</p>
+								</div>
+								<div class="type" onclick="location.href='./invit_range.html'">
+									<img src="../../images/more_icon_bd@2x.png" alt="" class="icon">
+									<p class="text">邀请达人榜</p>
+								</div>
+								<div class="type" id="shoucangIcon" onclick="showShoucangAlert()">
+									<img src="../../images/more_icon_sc@2x.png" alt="" class="icon">
+									<p class="text">收藏</p>
+								</div>
+								<div class="type">
+									<img src="../../images/more_icon_tc@2x.png" alt="" class="icon">
+									<p class="text">退出</p>
+								</div>
+							</div>
+							<div class="mui-slider-item item">
+								<div class="type" onclick="toggleDanmuList(this)">
+									<img src="../../images/more_icon_dmg@2x.png" alt="" class="icon noDanmuListIcon">
+									<img src="../../images/more_icon_dmk.png" alt="" class="icon showDanmuListIcon">
+									<p class="text">弹幕</p>
+								</div>
+								<div class="type" id="dashangIcon" onclick="showDashangAlert()">
+									<img src="../../images/more_icon_ds@2x.png" alt="" class="icon">
+									<p class="text">打赏</p>
+								</div>
+								<div class="type">
+									<img src="../../images/more_icon_ts@2x.png" alt="" class="icon">
+									<p class="text">投诉</p>
+								</div>
+							</div>
+						  </div>
+						  <div class="mui-slider-indicator">
+							  <div class="mui-indicator mui-active"></div>
+							  <div class="mui-indicator"></div>
+						  </div>
+						</div>
+					</div>
+					
+				</div>
+				<!-- 微资料 -->
+				<div id="item2" class="mui-scroll-wrapper mui-control-content">
+					<div class="mui-scroll ziliao_content" onclick="clickZiliaoContent()">
+						<p>感何革根后门四后千给天世查机候工称将还儿容与火十重直现我集极完系干院他影因点军展规准压步都理点代强过安务现商说商十看口进做规。龙节对处们水历应何真要群方些以变求存她片才平将六们却往气那气员复型查术这这八子支期大各美般与习料教结见备为识战同九各最亲。</p>
+						<img src="../../images/img.jpeg" alt="">
+						<img src="../../images/img.jpeg" alt="">
+					</div>
+				</div>
+				<!-- 小调查 -->
+				<div id="item3" class="mui-scroll-wrapper mui-control-content">
+					<div class="mui-scroll diaocha_content">
+						<img src="../../images/diaocha_img@2x.png" alt="" class="diaocha_img">
+						<p class="dis grey">听完周宁医生在线授课，感受如何？花1分钟做个评分吧～</p>
+						<button type="button" class="mui-btn mui-btn-primary scoreBtn">去评分</button>
+						<img src="../../images/default.png" alt="" class="ewm">
+					</div>
+				</div>
+				<!-- 考考你 -->
+				<div id="item4" class="mui-scroll-wrapper mui-control-content">
+					<div class="mui-scroll kaokao_content">
+						<div class="area correct">
+							<p class="question">为什么？</p>
+							<ul class="answer">
+								<li class="flex_box choosed">
+									<span class="hd val">A</span>
+									<span class="bd con">答案A答案A答案A答案A答案A答案A答案A答案A</span>
+								</li>
+								<li class="flex_box">
+									<span class="hd val">B</span>
+									<span class="bd con">答案B答案B答案B答案B答案B答案B答案B答案B答案B答案B答案B答案B答案B答案B答案B答案B答案B答案B答案B答案B</span>
+								</li>
+								<li class="flex_box">
+									<span class="hd val">C</span>
+									<span class="bd con">答案C</span>
+								</li>
+							</ul>
+							<div class="result_succ">回答正确</div>
+						</div>
+						
+						<div class="area error">
+							<p class="question">为什么？</p>
+							<ul class="answer">
+								<li class="flex_box">
+									<span class="hd val">A</span>
+									<span class="bd con">答案A答案A答案A答案A答案A答案A答案A答案A</span>
+								</li>
+								<li class="flex_box choosed">
+									<span class="hd val">B</span>
+									<span class="bd con">答案B答案B答案B答案B答案B答案B答案B答案B答案B答案B答案B答案B答案B答案B答案B答案B答案B答案B答案B答案B</span>
+								</li>
+								<li class="flex_box">
+									<span class="hd val">C</span>
+									<span class="bd con">答案C</span>
+								</li>
+							</ul>
+							<div class="result_fail">
+								<p class="red">回答错误</p>
+								<p class="correct_result">正确答案：<span class="blue">A</span></p>
+								<p class="dis">解析：XXXXXXX</p>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+				<div id="item5" class="mui-scroll-wrapper mui-control-content">4444</div>
+			</div>
+			
+			
+			
+			<!-- 悬浮按钮 -->
+			<div class="fixed_pop">
+				<img src="../../images/c_btn_bd@2x.png" alt="">
+				<!-- <img src="../../images/c_btn_dmg@2x.png" alt="">
+				<img src="../../images/c_btn_dmk@2x.png" alt="">
+				<img src="../../images/c_btn_ds@2x.png" alt="">
+				<img src="../../images/c_btn_fhb@2x.png" alt="">
+				<img src="../../images/c_btn_fx@2x.png" alt="">
+				<img src="../../images/c_btn_ly@2x.png" alt="">
+				<img src="../../images/c_btn_sc@2x.png" alt="">
+				<img src="../../images/c_btn_sy@2x.png" alt="">
+				<img src="../../images/c_btn_tc@2x.png" alt=""> -->
+			</div>
+			
+			<!-- 打赏弹窗 -->
+			<div class="mui-backdrop btmAlert dashangAlert mui-hidden" id="dashangAlert">
+				<div class="content">
+					<span class="mui-icon mui-icon-closeempty closeIcon" onClick="hideDashangAlert()"></span>
+					<p class="title">喜欢讲师</p>
+					<div class="persons flex_box justify">
+						<div class="mui-input-row mui-checkbox item">
+							<label>
+								<img src="../../images/default.png" class="header">
+								<p class="name">宣厚</p>
+							</label>
+							<input name="checkbox1" value="Item" type="checkbox" checked>
+						</div>
+						<div class="mui-input-row mui-checkbox item">
+							<label>
+								<img src="../../images/default.png" class="header">
+								<p class="name">宣厚</p>
+							</label>
+							<input name="checkbox1" value="Item2" type="checkbox" checked>
+						</div>
+						<div class="mui-input-row mui-checkbox item">
+							<label>
+								<img src="../../images/default.png" class="header">
+								<p class="name">宣厚</p>
+							</label>
+							<input name="checkbox1" value="Item3" type="checkbox" checked>
+						</div>
+					</div>
+					<p class="dis grey">打赏金额</p>
+					<div class="moneyBox flex_box">
+						<span class="money">¥ 5.21</span>
+						<span class="money">¥ 6.66</span>
+						<span class="money">¥ 18.88</span>
+						<span class="money">¥ 66.66</span>
+						<span class="money">¥ 100.00</span>
+						<span class="money">¥ 1.88</span>
+					</div>
+				</div>
+			</div>
+			
+			<!-- 发弹幕弹窗 -->
+			<div class="mui-backdrop danmuAlert mui-hidden" id="danmuAlert">
+				<div class="content">
+					<textarea rows="" cols="" placeholder="请输入弹幕内容～"></textarea>
+					<div class="two_btns">
+						<button type="button" class="mui-btn mui-btn-grey" onclick="hideDanmuAlert()">取消</button>
+						<button type="button" class="mui-btn mui-btn-primary" onclick="hideDanmuAlert()">发送</button>
+					</div>
+				</div>
+			</div>
+			
+			<!-- 留言弹窗 -->
+			<div class="mui-backdrop danmuAlert messageAlert mui-hidden" id="messageAlert">
+				<div class="content">
+					<p class="title">留言</p>
+					<textarea rows="" cols="" placeholder="请输入留言内容～"></textarea>
+					<div class="two_btns">
+						<button type="button" class="mui-btn mui-btn-grey" onclick="hideMessageAlert()">取消</button>
+						<button type="button" class="mui-btn mui-btn-primary" onclick="hideMessageAlert()">发送</button>
+					</div>
+				</div>
+			</div>
+			
+			<!-- 弹幕列表 -->
+			<ul class="danmuList mui-hidden" id="danmuList">
+				<li>
+					<div>
+						<img src="../../images/default.png" alt="" class="header">
+						<p class="txt">老师真帅</p>
+					</div>
+				</li>
+				<li>
+					<div>
+						<img src="../../images/default.png" alt="" class="header">
+						<p class="txt">有二维码嘛？</p>
+					</div>
+				</li>
+				<li>
+					<div>
+						<img src="../../images/default.png" alt="" class="header">
+						<p class="txt">听不懂</p>
+					</div>
+				</li>
+				<li>
+					<div>
+						<img src="../../images/default.png" alt="" class="header">
+						<p class="txt">发红包咯</p>
+					</div>
+				</li>
+				<li>
+					<div>
+						<img src="../../images/default.png" alt="" class="header">
+						<p class="txt">晚安</p>
+					</div>
+				</li>
+			</ul>
+			
+			<!-- 收藏提示 -->
+			<div class="mui-backdrop shoucangAlert messageAlert mui-hidden" id="shoucangAlert" onclick="hideShoucangAlert()">
+				<img src="../../images/shouchang_tishi@2x.png" alt="" class="img">
+			</div>
+			
+			<!-- 发红包弹窗 -->
+			<div class="mui-backdrop btmAlert mui-hidden hongbaoAlert" id="hongbaoAlert">
+				<div class="content">
+					<span class="mui-icon mui-icon-closeempty closeIcon" onClick="hideHongbaoAlert()"></span>
+					<p class="title">发红包</p>
+					<div class="area flex_box">
+						<span class="hd">红包金额</span>
+						<input type="text" class="bd" placeholder="0.00">
+						<span class="ft">元</span>
+					</div>
+					<div class="area flex_box">
+						<span class="hd">红包个数</span>
+						<input type="text" class="bd" placeholder="填写个数">
+						<span class="ft">个</span>
+					</div>
+					<textarea class="area" placeholder="恭喜发财，大吉大利"></textarea>
+					<p class="num">¥ 0.00</p><!-- mui-disabled -->
+					<button type="button" class="mui-btn mui-btn-danger mui-block mui-disabled submit">塞钱进红包</button>
+				</div>
+			</div>
+			
+			<!-- 打开红包 class 加 nomore表示红包抢完了-->
+			<div class="mui-backdrop btmAlert hongbaoKaiAlert mui-hidden" id="hongbaoKaiAlert">
+				<div class="content">
+					<div class="info">
+						<img src="../../images/default.png" alt="" class="header">
+						<p class="name">Susie Miles 的红包</p>
+						<p class="bless">恭喜发财，大吉大利</p>
+					</div>
+					<img src="../../images/hongbao_open.png" alt="" class="hongbaoKaiBtn" onclick="scrambleRedPack()">
+					<div class="nomore_text">
+						<p>手慢啦，红包已经抢完了</p>
+						<a href="./hongbao_detail.html" target="_blank">查看详情</a>
+					</div>
+					<i class="mui-icon mui-icon mui-icon-close closeHongbaoIcon" onclick="hideHongbaoKaiAlert()"></i>
+				</div>
+			</div>
+			
+			<!-- 发语音弹窗  mui-hidden-->
+			<div class="mui-backdrop btmAlert yuyinAlert mui-hidden" id="yuyinAlert">
+				<div class="content">
+					<span class="mui-icon mui-icon-closeempty closeIcon" onclick="hideYuyinAlert()"></span>
+					<p class="title">发送语音消息</p>
+					<div class="yuyin_img_box"></div>
+					<p class="grey">正在录音…</p>
+					<p class="black time">32S</p>
+					<div class="two_btns">
+						<button type="button" class="mui-btn mui-btn-grey" onclick="hideYuyinAlert()">取消</button>
+						<button type="button" class="mui-btn mui-btn-primary" onclick="hideYuyinAlert()">发送</button>
+					</div>
+				</div>
+			</div>
+			
 		</div>
 	</body>
 </html>
@@ -29,5 +558,231 @@
 
 <script type="text/javascript">
 	mui.ready(function () {
+		
+		mui('.tabControl').scroll({
+			scrollY: true, //是否竖向滚动
+			 scrollX: false, //是否横向滚动
+			 startX: 0, //初始化时滚动至x
+			 startY: 0, //初始化时滚动至y
+			 indicators: true, //是否显示滚动条
+			 deceleration:0.0006, //阻尼系数,系数越小滑动越灵敏
+			 bounce: true //是否启用回弹
+		});
+		mui('#item1, #item2, #item3, #item4, #item5').scroll({
+			scrollY: true, //是否竖向滚动
+			 scrollX: false, //是否横向滚动
+			 startX: 0, //初始化时滚动至x
+			 startY: 0, //初始化时滚动至y
+			 indicators: true, //是否显示滚动条
+			 deceleration:0.0006, //阻尼系数,系数越小滑动越灵敏
+			 bounce: true //是否启用回弹
+		});
+		
+		// 置顶公告轮播
+		var slider = mui("#top_tip_slider");
+		slider.slider({
+			interval: 1000
+		});
+		
+
 	})
+	
+	
+	startCountDown(document.getElementById('countDown'))
+	
+	function startCountDown(dom){
+		var dayDom = dom.getElementsByClassName('day')[0];
+		var hourDom = dom.getElementsByClassName('hour')[0];
+		var minuteDom = dom.getElementsByClassName('minute')[0];
+		var secondDom = dom.getElementsByClassName('second')[0];
+		
+		
+		
+		function formateTime(num) {
+			return num > 9 ? num : '0' + num
+		}
+		function  countdown(){
+			var now_time=new Date();
+			var alltime =go_time.getTime() - now_time.getTime ();  //总的时间（毫秒）
+			var haoscend =alltime%1000;  //毫秒
+			var second = formateTime( parseInt ( (alltime/1000)%60 ) ) ;  //秒
+			var minute = formateTime( parseInt((alltime/1000/60)%60 ) ) ;  //  分钟
+			var hour = formateTime( parseInt((alltime/1000/60/60)%24 ) ) ;   //小时
+			var day= formateTime( parseInt((alltime/1000/60/60/24)%30) );   //天数
+			var month= formateTime( parseInt((alltime/1000/60/60/24/30)%12) ); //月
+			
+			dayDom.innerHTML = day;
+			hourDom.innerHTML = hour;
+			minuteDom.innerHTML = minute;
+			secondDom.innerHTML = second;
+			
+			if( !(day == '00' && hour == '00' && minute == '00' && second == '00') ) {
+				setTimeout (countdown ,1000);
+			}
+		}
+		
+		var go_time=new Date("2020/03/17 00:00:00");
+		countdown ();
+		
+	}
+			
+			
+	// toggle更多
+	function toggleMore() {
+		document.getElementsByClassName('fixed_opreration')[0].classList.toggle('showMore');
+		document.getElementsByClassName('fixed_opreration')[0].classList.remove('showShortCut');
+		
+		if(Array.prototype.slice.call(document.getElementsByClassName('fixed_opreration')[0].classList).indexOf('showMore') > -1) {
+			document.getElementsByClassName('fixed_pop')[0].classList.add('mui-hidden');
+		} else {
+			document.getElementsByClassName('fixed_pop')[0].classList.remove('mui-hidden');
+		}
+		
+	}
+	// toggle快捷语
+	function toggleShortCut() {
+		document.getElementsByClassName('fixed_opreration')[0].classList.toggle('showShortCut');
+		document.getElementsByClassName('fixed_opreration')[0].classList.remove('showMore');
+	}
+	
+	// 显示/隐藏 弹幕
+	function toggleDanmuList(e) {
+		if(Array.prototype.slice.call(e.classList).indexOf('showDanmuList') > -1) {
+			document.getElementById('danmuList').classList.add('mui-hidden');
+			e.classList.remove('showDanmuList');
+			
+			document.getElementById('danmuBtn').classList.add('mui-hidden');
+			
+		} else {
+			document.getElementById('danmuList').classList.remove('mui-hidden');
+			e.classList.add('showDanmuList');
+			
+			document.getElementById('danmuBtn').classList.remove('mui-hidden');
+		}
+		toggleMore()
+	}
+	
+	// show打赏
+	function showDashangAlert(){
+		document.getElementsByClassName('dashangAlert')[0].classList.remove('mui-hidden');
+		document.getElementsByClassName('fixed_opreration')[0].classList.remove('showMore');
+	}
+	// hide打赏
+	function hideDashangAlert(){
+		document.getElementsByClassName('dashangAlert')[0].classList.add('mui-hidden'); 
+	}
+	
+	
+	// show发红包 
+	function showHongbaoAlert(){
+		document.getElementsByClassName('hongbaoAlert')[0].classList.remove('mui-hidden');
+		document.getElementsByClassName('fixed_opreration')[0].classList.remove('showMore');
+	}
+	// hide发红包
+	function hideHongbaoAlert(){
+		document.getElementsByClassName('hongbaoAlert')[0].classList.add('mui-hidden'); 
+	}
+	
+	
+	// show发送弹幕
+	function showDanmuAlert(){
+		document.getElementsByClassName('danmuAlert')[0].classList.remove('mui-hidden');
+	}
+	// hide发送弹幕
+	function hideDanmuAlert(){
+		document.getElementsByClassName('danmuAlert')[0].classList.add('mui-hidden');
+	}
+	
+	
+	// show留言弹幕
+	function showMessageAlert(){
+		document.getElementsByClassName('fixed_opreration')[0].classList.remove('showMore');
+		document.getElementsByClassName('messageAlert')[0].classList.remove('mui-hidden');
+	}
+	// hide留言弹幕
+	function hideMessageAlert(){
+		document.getElementsByClassName('messageAlert')[0].classList.add('mui-hidden'); 
+	}
+	
+	
+	// hide语音弹窗 
+	function hideYuyinAlert(){
+		document.getElementsByClassName('yuyinAlert')[0].classList.add('mui-hidden'); 
+		document.getElementsByClassName('yuyin_img_box')[0].classList.remove('animate'); 
+	}
+	// show语音弹窗
+	function showYuyinAlert(){
+		document.getElementsByClassName('yuyinAlert')[0].classList.remove('mui-hidden'); 
+		setTimeout(function() {
+			document.getElementsByClassName('yuyin_img_box')[0].classList.add('animate'); 
+		}, 1000)
+	}
+	
+	
+	
+	// show收藏提示
+	function showShoucangAlert() {
+		// toggleMore()
+		document.getElementsByClassName('fixed_opreration')[0].classList.remove('showMore');
+		document.getElementById('shoucangAlert').classList.remove('mui-hidden');
+	}
+	// hide收藏提示
+	function hideShoucangAlert() {
+		document.getElementById('shoucangAlert').classList.add('mui-hidden');
+	}
+	
+	function clickZiliaoContent(e) {
+		var ev = e || window.event;
+		if(ev.target.tagName === 'IMG') {
+			var src = ev.target.src;
+			if(src) {
+				window.open(src)
+			}
+		}
+	}
+	
+	
+	function showHongbaoKaiAlert() {
+		document.getElementById('hongbaoKaiAlert').classList.remove('mui-hidden')
+	}
+	
+	function hideHongbaoKaiAlert() {
+		document.getElementById('hongbaoKaiAlert').classList.add('mui-hidden')
+	}
+	
+	// 点击语音
+	function playVedio(e) {
+		vedioDom = e.getElementsByTagName('audio')[0];
+		if(vedioDom) {
+			if(Array.prototype.slice.call(e.classList).indexOf('new') > -1) {
+				e.classList.remove('new')
+			}
+			if(vedioDom.paused) {
+				vedioDom.currentTime = 0;
+				e.getElementsByClassName('yy_img')[0].classList.add('animate');
+				vedioDom.play();
+			}else {
+				e.getElementsByClassName('yy_img')[0].classList.remove('animate');
+				vedioDom.pause()
+			}
+		}
+	}
+	
+	// 点击红包
+	function handleRedPack(e) {
+		vedioDom = e.getElementsByTagName('audio')[0];
+		if(Array.prototype.slice.call(e.classList).indexOf('getted') > -1 ) {
+			goHongbaoDetail()
+		} else {
+			document.getElementById('hongbaoKaiAlert').classList.remove('mui-hidden')
+		}
+	}
+	// 开 红包
+	function scrambleRedPack() {
+		goHongbaoDetail();
+	}
+	
+	function goHongbaoDetail() {
+		window.open('./hongbao_detail.html')
+	}
 </script>
