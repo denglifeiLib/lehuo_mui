@@ -427,7 +427,8 @@ p{
 }
 .login_page .form input, .login_page .form select{
 	height: 11.9vw;
-	padding-left: 13.8vw;
+	padding: 10px;
+	padding-left: 12.5vw;
 	margin-bottom: 4.9vw;
 	font-size: 3.467vw;
 	color: #76e6eb;
