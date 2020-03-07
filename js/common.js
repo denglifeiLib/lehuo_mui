@@ -29,3 +29,8 @@ function copyText(text) {
 	return flag;
 }
 
+function tabControlCssFormat() {
+	var link = document.getElementById('#tabControl').getElementsByTagName('a')
+	console.log(8888, link.length)
+}
+

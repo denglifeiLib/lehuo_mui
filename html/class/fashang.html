@@ -1,0 +1,86 @@
+<!doctype html>
+<html manifest="IGNORE.manifest">
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta http-equiv="cache-control" content="max-age=0" />
+		<meta http-equiv="cache-control" content="no-cache" />
+		<meta http-equiv="expires" content="0" />
+		<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+		<meta http-equiv="pragma" content="no-cache" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.css" rel="stylesheet" />
+		<link href="../../css/h5.css" rel="stylesheet" />
+	</head>
+	
+	<body class="class_fashang_detail_page top_fixed_page">
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 id="title" class="mui-title">蓝鲸晚自习回看库精选</h1>
+		</header>
+		
+		<div class="mui-content">
+			
+			<div class="top_fixed_container">
+				<div class="search_blue">
+					<div class="mui-input-row mui-search">
+						<input type="search" class="mui-input-clear" placeholder="请输入要搜索的关键信息">
+					</div>
+				</div>
+				<div class="flex_box page_tt">
+					<div class="bd title">法商词典</div>
+					<img src="../../images/kcxq_bg@2x.png" alt="" class="ft">
+				</div>
+			</div>
+			
+			
+			<!-- 内容部分 -->
+			<div class="flexibleBox">
+				<div id="item1" class="mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<div class="class_type product">
+							<div class="item">
+								<div class="img_box">
+									<img src="../../images/default.png" alt="" class="img">
+									<div class="lock_box"></div>
+								</div>
+								<p class="title">遇见“偶然”收获“成功”直播</p>
+								<p class="text_grey">520次观看</p>
+							</div>
+							<div class="item">
+								<div class="img_box">
+									<img src="../../images/default.png" alt="" class="img">
+									<div class="lock_box"></div>
+								</div>
+								<p class="title">遇见“偶然”收获“成功”直播</p>
+								<p class="text_grey">520次观看</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</body>
+</html>
+
+
+<script src="../../js/mui.min.js"></script>
+<script src="../../js/common.js"></script>
+
+
+<script type="text/javascript">
+	mui.ready(function () {
+	
+		mui('#item1').scroll({
+			scrollY: true, //是否竖向滚动
+			 scrollX: false, //是否横向滚动
+			 startX: 0, //初始化时滚动至x
+			 startY: 0, //初始化时滚动至y
+			 indicators: true, //是否显示滚动条
+			 deceleration:0.0006, //阻尼系数,系数越小滑动越灵敏
+			 bounce: true //是否启用回弹
+		});
+		
+	})
+</script>

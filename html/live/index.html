@@ -12,19 +12,22 @@
 		<link href="../../css/mui.css" rel="stylesheet" />
 		<link href="../../css/h5.css" rel="stylesheet" />
 	</head>
-	<body class="live_page">
+	<body class="live_page top_fixed_page">
 		<div class="mui-content">
 			<!-- 顶部固定区域 -->
 			<div class="top_fixed_container" onclick="togglePlay()">
 				<!-- 视频 -->
-				<video id="videoElement" class="centeredVideo" autoplay width="100%" height="576">Your browser is too old which doesn't support HTML5 video.</video>
+				<div class="videoElement">
+					<video class="centeredVideo" autoplay width="100%" height="576">Your browser is too old which doesn't support HTML5 video.</video>
+				</div>
+				
 				<!-- 发弹幕 -->
 				<div class="danmuBtn mui-hidden" id="danmuBtn">
 					<div class="btn" onclick="showDanmuAlert()">点我发弹幕</div>
 				</div>
 				
 				<!-- 倒计时 -->
-				<div class="countDown flex_box justify" id="countDown">
+				<div class="countDown flex_box justify">
 					<div class="bd flex_box">
 						<img src="../../images/zb_icon_b@2x.png" alt="" class="icon">
 						直播倒计时
@@ -54,7 +57,7 @@
 				
 				<!-- tab选项卡 -->
 				<div id="tabControl" class="tabControl mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
-					<div class="mui-scroll">
+					<div class="mui-scroll"> 
 						<a class="mui-control-item mui-active" href="#item1">讨论区</a>
 						<a class="mui-control-item" href="#item2">微资料</a>
 						<a class="mui-control-item" href="#item3">小调查</a>
@@ -553,7 +556,7 @@
 
 <script src="../../js/mui.min.js"></script>
 <script src="../../js/flv.min.js"></script>
-<script src="../../js/vedio_live.js"></script>
+<!-- <script src="../../js/vedio_live.js"></script> -->
 
 
 <script type="text/javascript">
@@ -568,6 +571,19 @@
 			 deceleration:0.0006, //阻尼系数,系数越小滑动越灵敏
 			 bounce: true //是否启用回弹
 		});
+		tabControlCssFormat()
+		function tabControlCssFormat() {
+			var tabControlBox = document.getElementById('tabControl');
+			var link = tabControlBox.getElementsByTagName('a');
+			if(link.length >=4) {
+				tabControlBox.getElementsByClassName('mui-scroll')[0].classList.add('maxMount')
+			} else {
+				tabControlBox.getElementsByClassName('mui-scroll')[0].classList.remove('maxMount')
+			}
+		}
+		
+		
+		
 		mui('#item1, #item2, #item3, #item4, #item5').scroll({
 			scrollY: true, //是否竖向滚动
 			 scrollX: false, //是否横向滚动
@@ -584,12 +600,16 @@
 			interval: 1000
 		});
 		
+		
+		
 
 	})
 	
 	
-	startCountDown(document.getElementById('countDown'))
 	
+	
+	
+	startCountDown(document.getElementById('countDown'))
 	function startCountDown(dom){
 		var dayDom = dom.getElementsByClassName('day')[0];
 		var hourDom = dom.getElementsByClassName('hour')[0];
