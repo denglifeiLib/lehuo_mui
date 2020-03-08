@@ -14,36 +14,81 @@
 	</head>
 	<body class="hongbao_detail_page">
 		<div class="mui-content">
-			<div class="top_banner">
-				<div class="info">
-					<img src="../../images/default.png" alt="" class="header">
-					<p class="name">Susie Miles 的红包</p>
-					<p class="bless">恭喜发财，大吉大利</p>
-					<p class="num">39.01 元</p>
-					<p class="dis">已存入零钱，可直接提现 </p>
+			<div class="mui-scroll-wrapper">
+				<div class="mui-scroll">
+					<div class="top_banner">
+						<div class="info">
+							<img src="../../images/default.png" alt="" class="header">
+							<p class="name">Susie Miles 的红包</p>
+							<p class="bless">恭喜发财，大吉大利</p>
+							<p class="num">39.01 元</p>
+							<p class="dis">已存入零钱，可直接提现 </p>
+						</div>
+					</div>
+					<p class="qiang_num">4/30</p>
+					<div class="item flex_box">
+						<img src="../../images/default.png" class="hd header"/>
+						<div class="text bd">宾真爱<p class="grey">02-25 13:12:31</p></div>
+						<div class="ft">12.01元</div>
+					</div>
+					<div class="item flex_box">
+						<img src="../../images/default.png" class="hd header"/>
+						<div class="text bd">宾真爱<p class="grey">02-25 13:12:31</p></div>
+						<div class="ft">12.01元</div>
+					</div>
+					<div class="item flex_box">
+						<img src="../../images/default.png" class="hd header"/>
+						<div class="text bd">宾真爱<p class="grey">02-25 13:12:31</p></div>
+						<div class="ft">12.01元</div>
+					</div>
+					<div class="item flex_box">
+						<img src="../../images/default.png" class="hd header"/>
+						<div class="text bd">宾真爱<p class="grey">02-25 13:12:31</p></div>
+						<div class="ft">12.01元</div>
+					</div>
+					<div class="item flex_box">
+						<img src="../../images/default.png" class="hd header"/>
+						<div class="text bd">宾真爱<p class="grey">02-25 13:12:31</p></div>
+						<div class="ft">12.01元</div>
+					</div>
+					<div class="item flex_box">
+						<img src="../../images/default.png" class="hd header"/>
+						<div class="text bd">宾真爱<p class="grey">02-25 13:12:31</p></div>
+						<div class="ft">12.01元</div>
+					</div>
+					<div class="item flex_box">
+						<img src="../../images/default.png" class="hd header"/>
+						<div class="text bd">宾真爱<p class="grey">02-25 13:12:31</p></div>
+						<div class="ft">12.01元</div>
+					</div>
+					<div class="item flex_box">
+						<img src="../../images/default.png" class="hd header"/>
+						<div class="text bd">宾真爱<p class="grey">02-25 13:12:31</p></div>
+						<div class="ft">12.01元</div>
+					</div>
+					<div class="item flex_box">
+						<img src="../../images/default.png" class="hd header"/>
+						<div class="text bd">宾真爱<p class="grey">02-25 13:12:31</p></div>
+						<div class="ft">12.01元</div>
+					</div>
+					<div class="item flex_box">
+						<img src="../../images/default.png" class="hd header"/>
+						<div class="text bd">宾真爱<p class="grey">02-25 13:12:31</p></div>
+						<div class="ft">12.01元</div>
+					</div>
+					<div class="item flex_box">
+						<img src="../../images/default.png" class="hd header"/>
+						<div class="text bd">宾真爱<p class="grey">02-25 13:12:31</p></div>
+						<div class="ft">12.01元</div>
+					</div>
+					<div class="item flex_box">
+						<img src="../../images/default.png" class="hd header"/>
+						<div class="text bd">宾真爱<p class="grey">02-25 13:12:31</p></div>
+						<div class="ft">12.01元</div>
+					</div>
 				</div>
 			</div>
-			<p class="qiang_num">4/30</p>
-			<div class="item flex_box">
-				<img src="../../images/default.png" class="hd header"/>
-				<div class="text bd">宾真爱<p class="grey">02-25 13:12:31</p></div>
-				<div class="ft">12.01元</div>
-			</div>
-			<div class="item flex_box">
-				<img src="../../images/default.png" class="hd header"/>
-				<div class="text bd">宾真爱<p class="grey">02-25 13:12:31</p></div>
-				<div class="ft">12.01元</div>
-			</div>
-			<div class="item flex_box">
-				<img src="../../images/default.png" class="hd header"/>
-				<div class="text bd">宾真爱<p class="grey">02-25 13:12:31</p></div>
-				<div class="ft">12.01元</div>
-			</div>
-			<div class="item flex_box">
-				<img src="../../images/default.png" class="hd header"/>
-				<div class="text bd">宾真爱<p class="grey">02-25 13:12:31</p></div>
-				<div class="ft">12.01元</div>
-			</div>
+			
 		</div>
 	</body>
 </html>
@@ -55,5 +100,14 @@
 
 <script type="text/javascript">
 	mui.ready(function () {
+		mui('.mui-scroll-wrapper').scroll({
+			scrollY: true, //是否竖向滚动
+			 scrollX: false, //是否横向滚动
+			 startX: 0, //初始化时滚动至x
+			 startY: 0, //初始化时滚动至y
+			 indicators: true, //是否显示滚动条
+			 deceleration:0.0006, //阻尼系数,系数越小滑动越灵敏
+			 bounce: true //是否启用回弹
+		});
 	})
 </script>

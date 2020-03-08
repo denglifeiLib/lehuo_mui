@@ -1534,8 +1534,10 @@ div.search_white .mui-search{
 	right: 6px;
 }
 .custom_tongji_page #filterList .mui-popover-arrow {
-	left: auto;
-	right: 6px;
+	/* left: auto;
+	right: 6px; */
+	transform: rotate(180deg);
+	top: -24px;bottom: auto;
 }
 .custom_tongji_page .filterText{
 	padding-left: 2.7vw;
@@ -1543,7 +1545,11 @@ div.search_white .mui-search{
 }
 .custom_tongji_page .filter .xiala{
 	width: 2.1vw;
+	transition: 0.3s all;
 	vertical-align: middle;
+}
+.custom_tongji_page .filter.up .xiala{
+	transform: rotate(-180deg);
 }
 .mui-popover {
 	height: 300px;
@@ -1579,11 +1585,11 @@ div.search_white .mui-search{
 }
 .custom_tongji_page .list .row .icon{
 	width: 3.5vw;
+	transition: 0.3s all;
 	vertical-align: middle;
 }
-.custom_tongji_page .list .row .icon{
-	width: 3.5vw;
-	vertical-align: middle;
+.custom_tongji_page .list .row .show .icon{
+	transform: rotate(-180deg);
 }
 .custom_tongji_page .list .question_box{
 	padding: 4vw 5vw 3.7vw;

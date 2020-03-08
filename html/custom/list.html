@@ -26,27 +26,76 @@
 			</div>
 		</div>
 		<div class="mui-content top_search_content">
-			<div class="flex_box list">
-				<div class="text bd">“太”创未来招募“时代先行者”直播问卷</div>
-				<div class="ft">
-					<div class="blue">231</div>
-					<div class="grey">答卷数量</div>
+			<div class="mui-scroll-wrapper" style="top: 92px;">
+				<div class="mui-scroll" style="padding-top: 10px;">
+					
+					<div class="flex_box list" onclick="location.href='./tongji.html'">
+						<div class="text bd">“太”创未来招募“时代先行者”直播问卷</div>
+						<div class="ft">
+							<div class="blue">231</div>
+							<div class="grey">答卷数量</div>
+						</div>
+					</div>
+					<div class="flex_box list" onclick="location.href='./tongji.html'">
+						<div class="text bd">“太”创未来招募“时代先行者”直播问卷</div>
+						<div class="ft">
+							<div class="blue">231</div>
+							<div class="grey">答卷数量</div>
+						</div>
+					</div>
+					<div class="flex_box list" onclick="location.href='./tongji.html'">
+						<div class="text bd">“太”创未来招募“时代先行者”直播问卷</div>
+						<div class="ft">
+							<div class="blue">231</div>
+							<div class="grey">答卷数量</div>
+						</div>
+					</div>
+					<div class="flex_box list" onclick="location.href='./tongji.html'">
+						<div class="text bd">“太”创未来招募“时代先行者”直播问卷</div>
+						<div class="ft">
+							<div class="blue">231</div>
+							<div class="grey">答卷数量</div>
+						</div>
+					</div>
+					<div class="flex_box list" onclick="location.href='./tongji.html'">
+						<div class="text bd">“太”创未来招募“时代先行者”直播问卷</div>
+						<div class="ft">
+							<div class="blue">231</div>
+							<div class="grey">答卷数量</div>
+						</div>
+					</div>
+					<div class="flex_box list" onclick="location.href='./tongji.html'">
+						<div class="text bd">“太”创未来招募“时代先行者”直播问卷</div>
+						<div class="ft">
+							<div class="blue">231</div>
+							<div class="grey">答卷数量</div>
+						</div>
+					</div>
+					<div class="flex_box list" onclick="location.href='./tongji.html'">
+						<div class="text bd">“太”创未来招募“时代先行者”直播问卷</div>
+						<div class="ft">
+							<div class="blue">231</div>
+							<div class="grey">答卷数量</div>
+						</div>
+					</div>
+					<div class="flex_box list" onclick="location.href='./tongji.html'">
+						<div class="text bd">“太”创未来招募“时代先行者”直播问卷</div>
+						<div class="ft">
+							<div class="blue">231</div>
+							<div class="grey">答卷数量</div>
+						</div>
+					</div>
+					<div class="flex_box list" onclick="location.href='./tongji.html'">
+						<div class="text bd">“太”创未来招募“时代先行者”直播问卷</div>
+						<div class="ft">
+							<div class="blue">231</div>
+							<div class="grey">答卷数量</div>
+						</div>
+					</div>
+					
 				</div>
 			</div>
-			<div class="flex_box list">
-				<div class="text bd">“太”创未来招募“时代先行者”直播问卷</div>
-				<div class="ft">
-					<div class="blue">231</div>
-					<div class="grey">答卷数量</div>
-				</div>
-			</div>
-			<div class="flex_box list">
-				<div class="text bd">“太”创未来招募“时代先行者”直播问卷</div>
-				<div class="ft">
-					<div class="blue">231</div>
-					<div class="grey">答卷数量</div>
-				</div>
-			</div>
+			
 		</div>
 	</body>
 </html>
@@ -58,7 +107,15 @@
 
 <script type="text/javascript">
 	mui.ready(function () {
-		
+		mui('.mui-scroll-wrapper').scroll({
+			scrollY: true, //是否竖向滚动
+			 scrollX: false, //是否横向滚动
+			 startX: 0, //初始化时滚动至x
+			 startY: 0, //初始化时滚动至y
+			 indicators: true, //是否显示滚动条
+			 deceleration:0.0006, //阻尼系数,系数越小滑动越灵敏
+			 bounce: true //是否启用回弹
+		});
 		
 	})
 </script>

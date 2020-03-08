@@ -13,158 +13,152 @@
 		<link href="../../css/swiper-3.4.2.min.css" rel="stylesheet" />
 		<link href="../../css/h5.css" rel="stylesheet" />
 	</head>
-	
 	<body class="custom_tongji_page grey">
 		<header class="mui-bar mui-bar-nav">
 			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
 			<h1 id="title" class="mui-title">我的客户</h1>
 		</header>
 		<div class="mui-content">
-			<div class="top">
-				<div class="flex_box title">
-					<img src="../../images/icon_sjxq@2x.png" alt="" class="tt_icon hd">
-					<div class="text bd">“太”创未来招募“时代先行者”直播问卷</div>
+			<div class="mui-scroll-wrapper" style="top:44px">
+				<div class="mui-scroll">
+					<!--这里放置真实显示的DOM内容-->
+					<div class="top">
+						<div class="flex_box title">
+							<img src="../../images/icon_sjxq@2x.png" alt="" class="tt_icon hd">
+							<div class="text bd">“太”创未来招募“时代先行者”直播问卷</div>
+						</div>
+						<ul class="flex_box cont">
+							<li>
+								<p class="grey">参与人数</p>
+								<p class="num blue">205</p>
+							</li>
+							<li>
+								<p class="grey">及格人数</p>
+								<p class="num green">200</p>
+							</li>
+							<li>
+								<p class="grey">平均答题分数</p>
+								<p class="num blue">80</p>
+							</li>
+							<li>
+								<p class="grey">不及格人数</p>
+								<p class="num red">3</p>
+							</li>
+						</ul>
+					</div>
+					<div class="filter flex_box up" id="rangeClick" onclick="rangeClick">
+						<span>排序</span>
+						<a href="javascript:;" id="openPopover" class="filterText">
+							<span>答题时间</span>
+							<img src="../../images/xiala@2x.png" alt="" class="xiala">
+						</a>
+					</div>
+					
+					<div class="list memberList">
+						<div class="item">
+							<div class="flex_box row">
+								<img src="../../images/default.png" alt="" class="header hd">
+								<div class="bd">
+									<p class="name">Onyama Limba</p>
+									<p class="grey dis">答题时间：2020-03-01 15:23</p>
+								</div>
+								<div class="ft toggleBtn">
+									<span class="blue score">90</span>
+									<img src="../../images/zhankai@2x.png" alt="" class="icon">
+								</div>
+							</div>
+							<div class="flex_box question_box mui-hidden">
+								<div class="question right">
+									<span>第1题</span>
+									<div class="icon_box"></div>
+								</div>
+								<div class="question error">
+									<span>第2题</span>
+									<div class="icon_box"></div>
+								</div> 
+								<div class="question kong">
+									<span>第3题</span>
+									<div class="icon_box"></div>
+								</div>
+								<div class="question right">
+									<span>第4题</span>
+									<div class="icon_box"></div>
+								</div>
+								<div class="question right">
+									<span>第5题</span>
+									<div class="icon_box"></div>
+								</div>
+								<div class="question right">
+									<span>第6题</span>
+									<div class="icon_box"></div>
+								</div>
+								<div class="question right">
+									<span>第7题</span>
+									<div class="icon_box"></div>
+								</div>
+								<div class="question right">
+									<span>第8题</span>
+									<div class="icon_box"></div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="item">
+							<div class="flex_box row">
+								<img src="../../images/default.png" alt="" class="header hd">
+								<div class="bd">
+									<p class="name">Onyama Limba</p>
+									<p class="grey dis">答题时间：2020-03-01 15:23</p>
+								</div>
+								<div class="ft toggleBtn show">
+									<span class="red score">90</span>
+									<img src="../../images/zhankai@2x.png" alt="" class="icon">
+								</div>
+							</div>
+							<div class="flex_box question_box">
+								<div class="question right">
+									<span>第1题</span>
+									<div class="icon_box"></div>
+								</div>
+								<div class="question error">
+									<span>第2题</span>
+									<div class="icon_box"></div>
+								</div> 
+								<div class="question kong">
+									<span>第3题</span>
+									<div class="icon_box"></div>
+								</div>
+								<div class="question right">
+									<span>第4题</span>
+									<div class="icon_box"></div>
+								</div>
+								<div class="question right">
+									<span>第5题</span>
+									<div class="icon_box"></div>
+								</div>
+								<div class="question right">
+									<span>第6题</span>
+									<div class="icon_box"></div>
+								</div>
+								<div class="question right">
+									<span>第7题</span>
+									<div class="icon_box"></div>
+								</div>
+								<div class="question right">
+									<span>第8题</span>
+									<div class="icon_box"></div>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+					
+					
 				</div>
-				<ul class="flex_box cont">
-					<li>
-						<p class="grey">参与人数</p>
-						<p class="num blue">205</p>
-					</li>
-					<li>
-						<p class="grey">及格人数</p>
-						<p class="num green">200</p>
-					</li>
-					<li>
-						<p class="grey">平均答题分数</p>
-						<p class="num blue">80</p>
-					</li>
-					<li>
-						<p class="grey">不及格人数</p>
-						<p class="num red">3</p>
-					</li>
-				</ul>
 			</div>
-			<div class="filter flex_box">
-				<span>排序</span>
-				<a href="#filterList" id="openPopover" class="filterText">
-					<span>答题时间</span>
-					<img src="../../images/xiala@2x.png" alt="" class="xiala">
-				</a>
-				<div id="filterList" class="mui-popover">
-					<div class="mui-popover-arrow"></div>
-					<div class="mui-scroll-wrapper">
-						<div class="mui-scroll">
-							<ul class="mui-table-view">
-								<li class="mui-table-view-cell"><a href="#">Item1</a></li>
-								<li class="mui-table-view-cell"><a href="#">Item1</a></li>
-								<li class="mui-table-view-cell"><a href="#">Item1</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-			
-			<div class="list memberList">
-				<div class="item">
-					<div class="flex_box row">
-						<img src="../../images/default.png" alt="" class="header hd">
-						<div class="bd">
-							<p class="name">Onyama Limba</p>
-							<p class="grey dis">答题时间：2020-03-01 15:23</p>
-						</div>
-						<div class="ft toggleBtn">
-							<span class="blue score">90</span>
-							<img src="../../images/zhankai@2x.png" alt="" class="icon">
-						</div>
-					</div>
-					<div class="flex_box question_box mui-hidden">
-						<div class="question right">
-							<span>第1题</span>
-							<div class="icon_box"></div>
-						</div>
-						<div class="question error">
-							<span>第2题</span>
-							<div class="icon_box"></div>
-						</div> 
-						<div class="question kong">
-							<span>第3题</span>
-							<div class="icon_box"></div>
-						</div>
-						<div class="question right">
-							<span>第4题</span>
-							<div class="icon_box"></div>
-						</div>
-						<div class="question right">
-							<span>第5题</span>
-							<div class="icon_box"></div>
-						</div>
-						<div class="question right">
-							<span>第6题</span>
-							<div class="icon_box"></div>
-						</div>
-						<div class="question right">
-							<span>第7题</span>
-							<div class="icon_box"></div>
-						</div>
-						<div class="question right">
-							<span>第8题</span>
-							<div class="icon_box"></div>
-						</div>
-					</div>
-				</div>
-				
-				<div class="item">
-					<div class="flex_box row">
-						<img src="../../images/default.png" alt="" class="header hd">
-						<div class="bd">
-							<p class="name">Onyama Limba</p>
-							<p class="grey dis">答题时间：2020-03-01 15:23</p>
-						</div>
-						<div class="ft toggleBtn up">
-							<span class="red score">90</span>
-							<img src="../../images/zhankai@2x.png" alt="" class="icon">
-						</div>
-					</div>
-					<div class="flex_box question_box">
-						<div class="question right">
-							<span>第1题</span>
-							<div class="icon_box"></div>
-						</div>
-						<div class="question error">
-							<span>第2题</span>
-							<div class="icon_box"></div>
-						</div> 
-						<div class="question kong">
-							<span>第3题</span>
-							<div class="icon_box"></div>
-						</div>
-						<div class="question right">
-							<span>第4题</span>
-							<div class="icon_box"></div>
-						</div>
-						<div class="question right">
-							<span>第5题</span>
-							<div class="icon_box"></div>
-						</div>
-						<div class="question right">
-							<span>第6题</span>
-							<div class="icon_box"></div>
-						</div>
-						<div class="question right">
-							<span>第7题</span>
-							<div class="icon_box"></div>
-						</div>
-						<div class="question right">
-							<span>第8题</span>
-							<div class="icon_box"></div>
-						</div>
-					</div>
-				</div>
-				
-			</div>
-			
 		</div>
-		 <!-- 问答详情弹窗 -->
+		
+		<!-- 问答详情弹窗 -->
 		<div class="mui-backdrop tongjiQuestionAlert mui-hidden" id="questionAlert">
 			<div class="content">
 				<div class="main">
@@ -253,6 +247,7 @@
 				<button type="button" class="mui-btn mui-btn-white close" id="closeQuestionAlert">关闭</button>
 			</div>
 		</div>
+		
 	</body>
 </html>
 
@@ -262,15 +257,16 @@
 <script src="../../js/swiper.min.js"></script>
 
 <script type="text/javascript">
-	window.onload=function(){
-		
-		
-	}
-
-</script>
-
-<script type="text/javascript">
 	mui.ready(function () {
+		mui('.mui-scroll-wrapper').scroll({
+			scrollY: true, //是否竖向滚动
+			 scrollX: false, //是否横向滚动
+			 startX: 0, //初始化时滚动至x
+			 startY: 0, //初始化时滚动至y
+			 indicators: true, //是否显示滚动条
+			 deceleration:0.0006, //阻尼系数,系数越小滑动越灵敏
+			 bounce: true //是否启用回弹
+		});
 		
 		mui('body').on('tap','#closeQuestionAlert',function(e){
 			document.getElementById('questionAlert').classList.add('mui-hidden')
@@ -278,9 +274,28 @@
 		
 		mui('.memberList .item').on('tap','.toggleBtn',function(e){
 			var dom = e.currentTarget;
-			let listDom = dom.getElementsByClassName('question_box')
-			console.log(99999,listDom )
+			let listDom = dom.getElementsByClassName('question_box');
+			let toggleBtnDom = dom.getElementsByClassName('toggleBtn');
+			if(Array.prototype.slice.call(listDom[0].classList).indexOf('mui-hidden') > -1) {
+				listDom[0].classList.remove('mui-hidden')
+			} else {
+				listDom[0].classList.add('mui-hidden')
+			}
+			if(Array.prototype.slice.call(toggleBtnDom[0].classList).indexOf('show') > -1) {
+				toggleBtnDom[0].classList.remove('show')
+			} else {
+				toggleBtnDom[0].classList.add('show')
+			}
+			
 		});
+		
+		mui('body').on('tap', '#rangeClick', function() {
+			if(Array.prototype.slice.call(this.classList).indexOf('up') > -1) {
+				this.classList.remove('up')
+			} else {
+				this.classList.add('up')
+			}
+		})
 		
 		qustionBindClick()
 	})
@@ -309,6 +324,9 @@
 			initialSlide: index,
 			nextButton: '.next',
 			prevButton: '.prev',
+			onSlideChangeEnd: function(swiper){
+			  document.getElementById('questionId').innerHTML = swiper.activeIndex + 1;
+			}
 		})
 		mySwiper.init()
 	}
