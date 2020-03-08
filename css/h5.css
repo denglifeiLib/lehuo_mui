@@ -1632,6 +1632,95 @@ div.search_white .mui-search{
 }
 
 
+.tongjiQuestionAlert .content{
+	position: fixed;
+	padding: 0;
+	width: 91.2vw;
+	left: 4.5vw;
+	top: 50%;
+	bottom: auto;
+	transform: translateY(-50%);
+	background: transparent;
+}
+.tongjiQuestionAlert .main{
+	width: 91.2vw;
+	margin-bottom: 3.2vw;
+	border-radius:2.1vw;
+	overflow: hidden;
+	background: #fff;
+}
+.tongjiQuestionAlert .main .action_area{
+	padding: 0 4.3vw;
+	height:14.9vw;
+	background: #eee;
+	text-align: center;
+}
+.tongjiQuestionAlert .main .action_area .btn{
+	padding: 1.1vw 3.5vw;
+	color: #182238;
+	font-size: 3.7vw;
+	border-radius: 5px;
+	background: #fff;
+}
+.tongjiQuestionAlert .main .action_area .bd{
+	font-size: 4.8vw;
+	font-weight: bold;
+}
+.tongjiQuestionAlert .main .cont{
+	padding: 2.7vw 5.3vw 8.3vw;
+	text-align: left;
+}
+.tongjiQuestionAlert .main .cont .view{
+	justify-content: space-between;
+	font-size: 3.2vw;
+}
+.tongjiQuestionAlert .main .cont .question{
+	padding-top: 4vw;
+	padding-bottom: 8.3vw;
+	font-size:4.3vw;
+	font-weight:500;
+	color:rgba(20,20,20,1);
+}
+.tongjiQuestionAlert .main .cont .answer{
+	padding-bottom: 12vw;
+	color: #6C6C6C;
+	font-size: 3.7vw;
+}
+.tongjiQuestionAlert .main .cont .answer li {
+	margin-bottom: 2.1vw;
+}
+.tongjiQuestionAlert .main .cont .answer .val{
+	font-size: 4.8vw;
+	margin-right: 3.2vw;
+	font-weight: bold;
+	font-family:PingFangSC-Medium,PingFang SC;
+}
+.tongjiQuestionAlert .main .cont .answer .choosed span{
+	color: #019522;
+}
+.tongjiQuestionAlert .main .cont .header{
+	width: 7.7vw;
+	height: 7.7vw;
+	border-radius: 7vw;
+}
+.tongjiQuestionAlert .main .cont .choosed_val{
+	font-size: 3.7vw;
+	font-weight: bold;
+	color: #182238;
+}
+.tongjiQuestionAlert .main .cont .result{
+	font-size: 3.2vw;
+}
+.tongjiQuestionAlert .main .cont .correct_result{
+	font-size: 4.3vw;
+	font-weight: bold;
+}
+.tongjiQuestionAlert .close, .tongjiQuestionAlert .close:active{
+	width: 100%;
+	color: #182238;
+}
+
+
 
 .class_list_page .mui-content{
 	background: #efeff4;
@@ -1718,7 +1807,14 @@ div.search_white .mui-search{
 	right: 0;
 	bottom: 0;
 	left: 0;
-	background:rgba(0,0,0,0.5);
+	background:rgba(0,0,0,0.5) url(../images/lock@2x.png) center no-repeat;
+	background-size: 11.2vw 14.7vw;
+}
+.product.double .lock_box{
+	background-size: 5.3vw 6.9vw;
+}
+.product.oneHorizental .lock_box{
+	background-size: 4.8vw 6.1vw;
 }
 .product .title{
 	padding: 2.7vw 2.1vw 0;

@@ -11,6 +11,7 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link href="../../css/mui.css" rel="stylesheet" />
 		<link href="../../css/h5.css" rel="stylesheet" />
+		<link href="../../css/imageviewer.css" rel="stylesheet" />
 	</head>
 	<body class="live_page top_fixed_page">
 		<div class="mui-content">
@@ -313,10 +314,13 @@
 				</div>
 				<!-- 微资料 -->
 				<div id="item2" class="mui-scroll-wrapper mui-control-content">
-					<div class="mui-scroll ziliao_content" onclick="clickZiliaoContent()">
-						<p>感何革根后门四后千给天世查机候工称将还儿容与火十重直现我集极完系干院他影因点军展规准压步都理点代强过安务现商说商十看口进做规。龙节对处们水历应何真要群方些以变求存她片才平将六们却往气那气员复型查术这这八子支期大各美般与习料教结见备为识战同九各最亲。</p>
-						<img src="../../images/img.jpeg" alt="">
-						<img src="../../images/img.jpeg" alt="">
+					<div class="mui-scroll ziliao_content">
+						<p>感何革根后门四后千给天世查机候工称将还儿容与火十重直现我集极们却往气那气员复型查术这这八子支期大各美般与习料教结见备为识战同九各最亲。</p>
+						<img src="../../images/yuantiao.jpg" data-preview-src="" data-preview-group="1" />
+						<p>因点军展规准压步都理点代强过安务现商说商十看口进做</p>
+						<img src="../../images/muwu.jpg" data-preview-src="" data-preview-group="1" />
+						<img src="../../images/shuijiao.jpg" data-preview-src="" data-preview-group="1" />
+						<p>完系干院他影规。龙节对处们水历应何真要群方些以变求存她片才平将六</p>
 					</div>
 				</div>
 				<!-- 小调查 -->
@@ -555,11 +559,17 @@
 
 
 <script src="../../js/mui.min.js"></script>
-<script src="../../js/flv.min.js"></script>
+<script src="../../js/mui.zoom.js"></script>
+<script src="../../js/mui.previewimage.js"></script>
+
+
+<!-- <script src="../../js/flv.min.js"></script> -->
 <!-- <script src="../../js/vedio_live.js"></script> -->
 
 
 <script type="text/javascript">
+	
+	
 	mui.ready(function () {
 		
 		mui('.tabControl').scroll({
@@ -605,10 +615,10 @@
 
 	})
 	
+	// 图片预览
+	mui.previewImage();
 	
-	
-	
-	
+	// 倒计时
 	startCountDown(document.getElementById('countDown'))
 	function startCountDown(dom){
 		var dayDom = dom.getElementsByClassName('day')[0];
@@ -751,15 +761,15 @@
 		document.getElementById('shoucangAlert').classList.add('mui-hidden');
 	}
 	
-	function clickZiliaoContent(e) {
-		var ev = e || window.event;
-		if(ev.target.tagName === 'IMG') {
-			var src = ev.target.src;
-			if(src) {
-				window.open(src)
-			}
-		}
-	}
+	// function clickZiliaoContent(e) {
+	// 	var ev = e || window.event;
+	// 	if(ev.target.tagName === 'IMG') {
+	// 		var src = ev.target.src;
+	// 		if(src) {
+	// 			window.open(src)
+	// 		}
+	// 	}
+	// }
 	
 	
 	function showHongbaoKaiAlert() {
