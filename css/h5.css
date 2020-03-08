@@ -1581,6 +1581,10 @@ div.search_white .mui-search{
 	width: 3.5vw;
 	vertical-align: middle;
 }
+.custom_tongji_page .list .row .icon{
+	width: 3.5vw;
+	vertical-align: middle;
+}
 .custom_tongji_page .list .question_box{
 	padding: 4vw 5vw 3.7vw;
 	margin-bottom: 1px;
