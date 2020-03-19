@@ -1,0 +1,188 @@
+<!doctype html>
+<html manifest="IGNORE.manifest">
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta http-equiv="cache-control" content="max-age=0" />
+		<meta http-equiv="cache-control" content="no-cache" />
+		<meta http-equiv="expires" content="0" />
+		<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+		<meta http-equiv="pragma" content="no-cache" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.css" rel="stylesheet" />
+		<link href="../../css/h5.css" rel="stylesheet" />
+	</head>
+	<style type="text/css">
+		.login4_page .mui-content{
+			width: 100%;
+			height: 177.86667vw;
+			padding-top: 0;
+			background: url(../../images/login4/bg.png);
+		}
+		.login4_page  .login_choose_box.mui-content{
+			padding-top: 24.8vw;
+		}
+		.login4_page  .login_form_box.mui-content #type_custmor{
+			padding-top: 23.2vw;
+		}
+		.login4_page  .login_form_box.mui-content #type_partner{
+			padding-top: 27.3vw;
+		}
+		
+		.login4_page .login_choose_img {
+			width: 71.066vw;
+			height: 115.333vw;
+		}
+		.login4_page .login_fyxy_img{
+			width: 100vw;
+			height: 115.9vw;
+		}
+		.login4_page .login_yxy_img{
+			width: 100vw;
+			height: 104.4vw;
+		}
+		
+		.login4_page .list.fakeDom{
+			top: 46.6vw;
+			left: 14.3vw;
+			margin: 0;
+		}
+		.login4_page .fakeDom .item{
+			width: 72vw;
+			height: 27.333vw;
+			margin-bottom: 9.6vw;
+		}
+		
+		.login4_page .fakeDom input, .login4_page .fakeDom select{
+			/* background: rgba(244,0,0,0.5); */
+		}
+		.login4_page .form{
+			width: 70.3vw;
+		}
+		.login4_page .form input, .login4_page .form select{
+			height: 9.3vw;
+			padding: 0;
+			padding-left: 15vw;
+			margin-bottom: 6.7vw;
+			line-height: 9.3vw;
+			font-size: 3.467vw;
+			color: #fff;
+			/* background-color: transparent; */
+		}
+		.login4_page #type_custmor .fakeDom{
+			top: 66vw;
+			left: 15.1vw;
+			/* margin: 0; */
+		}
+		.login4_page #type_partner .fakeDom{
+			top: 72.5vw;
+			left: 15.0vw;
+			/* margin: 0; */
+		}
+		.login4_page #type_partner .form input, .login4_page #type_partner .form select{
+			margin-bottom: 8.3vw;
+		}
+	
+		
+		.login4_page .form button{
+			height: 8.3vw;
+			/* background: rgba(244,0,0,0.5); */
+		}
+		.login4_page input::-webkit-input-placeholder{
+			color: #fff;
+		}
+		.login4_page input:-moz-placeholder{
+			color: #fff;
+		}
+	</style>
+	<body class="login_page login4_page">
+		<div class="mui-scroll-wrapper">
+			<div class="mui-scroll">
+				<div class="login_choose_box mui-content" id="login_choose_box">
+					<img src="../../images/login4/xuanze.png" class="login_choose_img">
+					<div class="list fakeDom">
+						<div class="item" id="custmor"></div>
+						<div class="item" id="partner"></div>
+					</div>
+				</div>
+				<div class="login_form_box mui-content mui-hidden" id="login_form_box">
+					<!-- 客户登录 -->
+					<div class="fyxy" id="type_custmor">
+						<img src="../../images/login4/kehu.png" class="login_fyxy_img">
+						<div class="form fakeDom">
+							<input value="" type="text" class="mui-input-clear" placeholder="请输入您的姓名">
+							<select placeholder="请选择推荐人的机构" value="">
+								<option value ="1">BBBBBBBB</option>
+								<option value ="2">BBBBBBBB</option>
+								<option value ="3">BBBBBBBB</option>
+								<option value ="4">BBBBBBBB</option>
+							</select>
+							<input value="" type="text" class="mui-input-clear" placeholder="请输入推荐人工号">
+							<button type="button"></button>
+						</div>
+					</div>
+					
+					<!-- 太保伙伴 -->
+					<div class="fyxy mui-hidden" id="type_partner">
+						<img src="../../images/login4/tbhb.png" class="login_yxy_img">
+						<div class="form fakeDom">
+							<select placeholder="请选择您的机构">
+								<option value ="">BBBBBBBB</option>
+								<option value ="">BBBBBBBB</option>
+								<option value ="">BBBBBBBB</option>
+								<option value ="">BBBBBBBB</option>
+							</select>
+							<!-- <input value="" type="text" class="mui-input-clear" placeholder="请输入您的姓名"> -->
+							<input value="" type="text" class="mui-input-clear" placeholder="请输入您的工号">
+							<button type="button"></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</body>
+</html>
+
+
+<script src="../../js/mui.min.js"></script>
+<script src="../../js/common.js"></script>
+
+
+<script type="text/javascript">
+	mui.ready(function () {
+		
+		mui('.mui-scroll-wrapper').scroll({
+			scrollY: true, //是否竖向滚动
+			 scrollX: false, //是否横向滚动
+			 startX: 0, //初始化时滚动至x
+			 startY: 0, //初始化时滚动至y
+			 indicators: true, //是否显示滚动条
+			 deceleration:0.0006, //阻尼系数,系数越小滑动越灵敏
+			 bounce: true //是否启用回弹
+		});
+		
+		
+		var type = 'partner';
+		
+		mui('.login_page').on('tap', '#partner', function() {
+			document.getElementById("login_choose_box").classList.add('mui-hidden');
+			document.getElementById("login_form_box").classList.remove('mui-hidden');
+			document.getElementById("type_partner").classList.remove('mui-hidden');
+			document.getElementById("type_custmor").classList.add('mui-hidden');
+		})
+		
+		mui('.login_page').on('tap', '#custmor', function() {
+			document.getElementById("login_choose_box").classList.add('mui-hidden');
+			document.getElementById("login_form_box").classList.remove('mui-hidden');
+			document.getElementById("type_custmor").classList.remove('mui-hidden');
+			document.getElementById("type_partner").classList.add('mui-hidden');
+		})
+		
+		mui('.login_page').on('tap', '#logout_btn', function() {
+			mui.openWindow({
+				// url:'../redPacket/index.html'
+			});
+		})
+	})
+</script>
