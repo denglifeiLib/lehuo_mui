@@ -2136,3 +2136,87 @@ div.search_white .mui-search{
 }
 /* --------- add 3.28 end-------------- */
 
+
+
+/* ----------- add直播列表 -------------- */
+.row2{
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	overflow: hidden;
+}
+.live_list_page .list_type{
+	padding: 0 6.4vw 0 4.8vw;
+	height: 15.2vw;
+	color: #fff;
+	background: #1F78F2;
+}
+.live_list_page .list_type .bd{
+	padding-left: 4.1vw;
+	font-size: 4.3vw;
+	font-weight:500;
+	height: 8.8vw;line-height: 8.8vw;
+	color: #fff;
+	background: url(../images/tips/live_tt@2x.png) left center no-repeat;
+	background-size: 24.3vw 8.8vw;
+}
+.live_list_page .list_type .arr{
+	width: 1.9vw;
+	height: 2.9vw;
+	margin-left: 2.1vw;
+}
+.live_list_page .list .list_item .small_img{
+	width:37.9vw;
+	height: 21.6vw;
+	border-radius: 3px;
+	margin-right: 3.2vw;
+}
+.live_list_page .list .list_item .title{
+	font-size:4vw;
+	font-weight:500;
+	color:rgba(24,34,56,1);
+}
+.live_list_page .list .list_item .disc{
+	font-size:3.2vw;
+	font-weight:500;
+	color:rgba(156,156,165,1);
+}
+.live_list_page .list .list_item .bd{
+	display: flex;
+	height: 21.6vw;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.live_list_page .list_box{
+	position: relative;
+	padding: 0 4.8vw 9.9vw;
+	margin-bottom: 1px;
+	background: #fff;
+}
+.live_list_page .list_header {
+	height: 14.4vw;
+}
+.live_list_page .list_header .icon{
+	width: 5.3vw;
+	height: 5.3vw;
+	margin-right: 2.9vw;
+}
+.live_list_page .list_header .bd{
+	font-size:4.3vw;
+	font-weight:600;
+	color:rgba(24,34,56,1);
+}
+.live_list_page .mui-slider-indicator{
+	left: 0;
+	right: 0;
+}
+.live_list_page .empty{
+	height: 33.3vw;
+	text-align: center;
+}
+.live_list_page .empty img{
+	height: 23.2vw;
+}
+.mt10{
+	margin-top: 10px;
+}
